@@ -1,5 +1,4 @@
 # git多账户配置
-------
 ## 问题描述
 公司git账号：company         项目名称：CompanyApp
 
@@ -135,4 +134,5 @@
 回到公司项目目录下测试push也成功
 
 好的，大功告成！
+[原文链接]（https://blog.csdn.net/wei371522/article/details/79163805）
 
