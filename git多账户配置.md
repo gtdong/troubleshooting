@@ -58,11 +58,11 @@
 
 配置规范如下：
 
-    #Host host（Host简称，使用命令ssh host可连接远程服务器，如：ssh github）
-    #User/Email 登录用户名(如：zlzsam/zlzsam@hotmail.com)
-    #HostName 主机名用ip或域名，建议使用域名(如:github.com)  
-    #Port 服务器open-ssh端口（默认：22,默认时一般不写此行
-    #IdentityFile 证书文件路径（如~/.ssh/id_rsa_*)
+    #Host host    （Host简称，使用命令ssh host可连接远程服务器，如：ssh github）
+    #User/Email    登录用户名(如：zlzsam/zlzsam@hotmail.com)
+    #HostName      主机名用ip或域名，建议使用域名(如:github.com)  
+    #Port          服务器open-ssh端口（默认：22,默认时一般不写此行
+    #IdentityFile  证书文件路径（如~/.ssh/id_rsa_*)
 
 具体例子：
 
