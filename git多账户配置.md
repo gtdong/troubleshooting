@@ -1,4 +1,5 @@
 # git多账户配置
+
 ## 问题描述
 公司git账号：company         项目名称：CompanyApp
 
@@ -20,7 +21,7 @@
 
     Please make sure you have the correct access rights
 
-因为github是使用SSH key的fingerprint来判定你是哪个账户，而不是通过用户名。这种情况下github无法判断使用哪个.ssh/id_rsa.pub所对应的账户进行登陆。
+因为github是使用SSH key的fingerprint来判定你是哪个账户，而不是通过用户名。这种情况下github无法判断使用哪个`.ssh/id_rsa.pub`所对应的账户进行登陆。
 
 ## 解决方法：
 
@@ -43,9 +44,9 @@
     Your public key has been saved in /Users/mac/.ssh/company_id_rsa.pub.
 
 
-2.将上面ssh密钥生成步骤重复一次生成self_id_rsa密钥，最后得到四个文件：company_id_rsa、company_id_rsa.pub和self_id_rsa、self_id_rsa.pub
+2.将上面ssh密钥生成步骤重复一次生成`self_id_rsa`密钥，最后得到四个文件：`company_id_rsa、company_id_rsa.pub和self_id_rsa、self_id_rsa.pub`
 
-分别把company_id_rsa.pub，self_id_rsa.pub的内容粘贴到公司和个人git账号的ssh里面，用户名字随便起，可以相同
+分别把`company_id_rsa.pub，self_id_rsa.pub`的内容粘贴到公司和个人git账号的ssh里面，用户名字随便起，可以相同
 
  
 
@@ -55,19 +56,13 @@
 
     vim ~/.ssh/config
 
-配置规范如下
+配置规范如下：
 
-#Host host（Host简称，使用命令ssh host可连接远程服务器，如：ssh github）
-
-#User/Email 登录用户名(如：zlzsam/zlzsam@hotmail.com)
-
-#HostName 主机名用ip或域名，建议使用域名(如:github.com)
-
-#Port 服务器open-ssh端口（默认：22,默认时一般不写此行
-
-#IdentityFile 证书文件路径（如~/.ssh/id_rsa_*)
-
- 
+    #Host host（Host简称，使用命令ssh host可连接远程服务器，如：ssh github）
+    #User/Email 登录用户名(如：zlzsam/zlzsam@hotmail.com)
+    #HostName 主机名用ip或域名，建议使用域名(如:github.com)  
+    #Port 服务器open-ssh端口（默认：22,默认时一般不写此行
+    #IdentityFile 证书文件路径（如~/.ssh/id_rsa_*)
 
 具体例子：
 
@@ -97,7 +92,7 @@
     origin git@github.com:self/SelfApp.git (fetch)
     origin git@github.com:self/SelfApp.git (push)
 
-发现ssh-url 是github上显示的是 git@github.com:self/SelfApp.git，注意：git上这个链接不会因为你的config配置而对应改变的！
+发现ssh-url 是github上显示的是 `git@github.com:self/SelfApp.git`，注意：git上这个链接不会因为你的config配置而对应改变的！
 
 因为我们在config文件里设置了：
 
@@ -134,5 +129,6 @@
 回到公司项目目录下测试push也成功
 
 好的，大功告成！
+
 [原文链接]（https://blog.csdn.net/wei371522/article/details/79163805）
 
