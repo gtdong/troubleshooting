@@ -45,7 +45,6 @@
 
 
 2.将上面ssh密钥生成步骤重复一次生成`self_id_rsa`密钥，最后得到四个文件：`company_id_rsa、company_id_rsa.pub和self_id_rsa、self_id_rsa.pub`
-
 分别把`company_id_rsa.pub，self_id_rsa.pub`的内容粘贴到公司和个人git账号的ssh里面，用户名字随便起，可以相同
 
  
@@ -78,8 +77,7 @@
     User zww
     IdentityFile ~/.ssh/self_id_rsa
 
-注意：IdentityFile路径不要写错，IdentityFile文件位置是rsa私钥，不是.pub公钥 ；
-
+**注意:** IdentityFile路径不要写错，IdentityFile文件位置是rsa私钥，不是.pub公钥 ；
 这样的话，我们就可以通过使用github.com 别名 self.github.com来明确说你要是使用self_id_rsa的SSH key来连接github，即使用工作账号进行操作也可以判断。
 
  
