@@ -1,7 +1,6 @@
 # github中的README.md语法
 
 GitHub中的README文件，使用markdown格式的文件。这种文件语法比较简单，特别容易上手。
-
 Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，因此有很多人用它写博客。世界上最流行的博客平台WordPress和大型CMS如joomla、drupal都能很好的支持Markdown。
 
 ## 相关语法
@@ -46,11 +45,11 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 
     只要两个Tab再输入文字即可
 
-**多行文本框：
+**多行文本框：**
 
     你可以写入代码等,每行文字只要输入两个Tab再输入文字即可
 
-**引用：
+**引用：**
 
     引用是使用类似 email 中用 > 的引用方式，例如：> 文字被些字符包围开始，可以在每行上加上“<”，也可以只在首行加上“<”能够达到一样的效果。区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 > ：
 
@@ -64,13 +63,13 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 
     > 回到第一层。
 
-**列表：
+**列表：**
 
     无序列表使用星号、加号或是减号作为列表标记，例如：*Red、+Green、-Blue
 
     有序列表则使用数字接着一个英文句点，例如：1.hello；注意，你在列表标记上使用的数字并不会影响输出的 HTML 结果，你可以使用1. Bird 1. McHale 1. Parish甚至6.ADC 3.EFG 9.XYZ 都可以实现正确的有序列表显示。
 
-**超链接：
+**超链接：**
 
     Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。
 
@@ -83,9 +82,9 @@ Markdown的语法简洁明了、学习容易，而且功能比纯文本更强，
 
     接着，在文件的任意处，你可以把这个标记的链接内容定义出来：[id]: http://example.com/ "Optional Title Here"
 
-**图片：
+**图片：**
 
     图片的语法和超链接非常相似。只显示图片：![github](http://example.com/unicorn.png “github”)；
     点击图片进入另一个网页：[![image]](http://www.example.com/) [image]: http://example.com/example.png “example“
 
-[原文链接：](https://blog.csdn.net/yagamil/article/details/43671997)
+[原文链接](https://blog.csdn.net/yagamil/article/details/43671997)
