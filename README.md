@@ -1,39 +1,46 @@
 # node多版本管理
-## nvm安装
-安装：
-`curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash`
+## nvm安装   
+nvm是node的多版本管理器，所以在我们安装node之前我们要先安装nvm：
 
-使用nvm ls-remote看一下node有哪些版本可以安装
-安装多版本
+    curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash
+    
+## nvm使用
+1.**查看当前可以使用的所有node版本**
+ 
+    nvm ls-remote
+    
+2.**安装指定版本**
 
-       → nvm install v4.5.0 Downloading https://nodejs.org/dist/v4.5.0/node-v4.5.0-darwin-x64.tar.gz..######################## 100.0%
+    nvm install <version>
+    eg:
+       -> nvm install v8.9.4
+       
+3.**切换node版本**
+ 
+    nvm use <version>
+    eg:
+       -> nvm use v8.9.4
+       v8.9.4
+       
+4.**查看当前安装的所有版本**
 
+    nvm ls
+             v8.9.4
+    ->       v6.12.3
+             system
+    node -> stable (-> v6.12.3) (default)
+    stable -> 6.12 (-> v6.12.3) (default)
+    iojs -> N/A (default)
 
-nvm 轻松切换 node 版本
-nvm会将各个版本的node安装在~/.nvm/versions/node目录下
-→ nvm ls
-         v4.5.0
-->       v5.9.0
-         system
-node -> stable (-> v5.9.0) (default)
-stable -> 5.9 (-> v5.9.0) (default)
-iojs -> N/A (default)
+箭头指的是当前使用的版本
 
-箭头（➡️）选择当前版本
-使用nvm use切换版本
-→ nvm use v4.5.0
-Now using node v4.5.0 (npm v2.15.9)
-→ node -v
-v4.5.0
+5.**查看当前 node 版本**
 
+    nvm current
 
-查看当前 node 版本
-nvm current
+6.**指定默认node版本**
 
-注意
-新打开一个bash，输入nvm current会发现显示为
-→ nvm current
-system
-
-使用nvm alias default <version>命令来指定一个默认的node版本
+    nvm alias default <version>
+    eg:
        nvm alias default v8.9.4
+**注意:这一步非常重要，如果你想在下一次打开终端时还使用这个版本，你就要使用`nvm alias default <version`指定一个默认版本**
