@@ -1,13 +1,12 @@
 # node多版本管理
- nvm 使用攻略
+## nvm安装
 安装：
 `curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.2/install.sh | bash`
 
-使用
 使用nvm ls-remote看一下node有哪些版本可以安装
 安装多版本
 
-→ nvm install v4.5.0 Downloading https://nodejs.org/dist/v4.5.0/node-v4.5.0-darwin-x64.tar.gz..######################## 100.0%
+       → nvm install v4.5.0 Downloading https://nodejs.org/dist/v4.5.0/node-v4.5.0-darwin-x64.tar.gz..######################## 100.0%
 
 
 nvm 轻松切换 node 版本
