@@ -27,7 +27,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 ### nodejs
 * [node多版本管理](doc/node多版本管理.md)
 
-## system&Service
+## system&service
 
 ### shell
 
