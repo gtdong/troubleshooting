@@ -4,12 +4,23 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 ## 目录
 * [语言类](#语言类)
   * [语言](#语言)
+  
+  
+* [非语言类](#非语言类)
   * [操作系统](#操作系统)
   * [webserver](#webserver)
   * [blockchain](#blockchain)
   * [应用](#应用)
 
 ## 语言类
+
+### 语言
+
+* [github中的README语法](doc/github中的README.md语法.md)
+* [git多账户配置](doc/git多账户配置.md)
+* [node多版本管理](doc/node多版本管理.md)
+
+## 非语言类
 
 ### 操作系统
 
@@ -26,12 +37,6 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [https配置](doc/https.md)
 * [postfix](doc/postfix.md)
 * [postfix加密](doc/postfix加密.md)
-
-### 语言
-
-* [github中的README语法](doc/github中的README.md语法.md)
-* [git多账户配置](doc/git多账户配置.md)
-* [node多版本管理](doc/node多版本管理.md)
 
 ### 应用
 * [seafile](doc/seafile.md)
