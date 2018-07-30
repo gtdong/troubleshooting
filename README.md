@@ -12,5 +12,6 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [postfix加密](doc/postfix加密.md)
 * [peatio](doc/deploy-production-server-centos-7.4.md)
 * [Byteball](doc/Byteball.md)
+* [eos](doc/eos.md)
 ### Contact me
 stevengtdong@gmail.com
