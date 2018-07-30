@@ -1,5 +1,4 @@
 # seafile on mac
------
 
 ## required
    docker  
