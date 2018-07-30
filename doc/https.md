@@ -1,7 +1,7 @@
 # https免费证书配置
 ## 背景
 1、http 和 https 是什么？
-
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/http-https.gif)
 简单来说，http 是一个传输网页内容的协议，比如你看到的 http 开头的网站 http://www.163.com, 其网页上的文字、图片、 CSS 、 JS 等文件都是通过 http 协议传输到我们的浏览器，然后被我们看到。
 而 https 可以理解为“ HTTP over SSL/TLS ”，好端端的 http 为什么需要“ over SSL/TLS ”呢，因为 http 是明文传输的，通过 http 协议传输的内容很容易被偷看和篡改，为了安全（你肯定不想被人偷看或者篡改网页内容吧，比如网站银行密码什么的。）就为 http 协议再加上了一层 SSL/TLS 安全协议，所以就有了 https 。
 
