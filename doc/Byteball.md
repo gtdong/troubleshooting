@@ -1,15 +1,15 @@
-##Byteball on Mac
+## Byteball on Mac
 
 Overview
 
 1.Install NW.js v0.14.7 LTS  
 2.Install Node.js v5.12.0
 
-###1.Install NW.js v0.14.7 LTS
+### 1.Install NW.js v0.14.7 LTS
       nw install 0.14.7
       nw ls  查看是否安装成功
       
-###2. Node.js v5.12.0
+### 2. Node.js v5.12.0
       这里的安装方法有两种，一种是下载二进制包，一种是编译安装
       wget https://nodejs.org/download/release/v5.12.0/node-v5.12.0.pkg
       ------------------------------
@@ -21,7 +21,7 @@ Overview
       make install
       node -v 查看是否安装成功
       
-###3. Install byteball
+### 3. Install byteball
    Clone the source:
    
     git clone https://github.com/byteball/byteball.git
