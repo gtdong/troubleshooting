@@ -2,27 +2,27 @@
 ## Mission
 My mission is to build a home for those who have trouble in using linux.Here I give some troubleshooting examples when using linux.Welcome to communicate with me!
 ## Contents
-* [语言类](#语言类)
-  * [语言](#语言)
+* [Programming](#Programming)
+  * [language](#language)
   
   
-* [非语言类](#非语言类)
-  * [操作系统](#操作系统)
+* [System](#System)
+  * [operation syatem](#operation syatem)
   * [webserver](#webserver)
   * [blockchain](#blockchain)
   * [应用](#应用)
 
-## 语言类
+## Programming
 
-### 语言
+### language
 
 * [github中的README语法](doc/github中的README.md语法.md)
 * [git多账户配置](doc/git多账户配置.md)
 * [node多版本管理](doc/node多版本管理.md)
 
-## 非语言类
+## System
 
-### 操作系统
+### operation syatem
 
 * [最大文件打开数限制](doc/最大文件打开数限制.md)
 
