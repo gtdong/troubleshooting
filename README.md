@@ -1,5 +1,5 @@
 # Linuxtroubleshooting
-### Mission
+## Mission
 My mission is to build a home for those who have trouble in using linux.Here I give some troubleshooting examples when using linux.Welcome to communicate with me!
 ## Contents
 * [语言类](#语言类)
@@ -44,5 +44,5 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 
 
 
-### Contact me
+## Contact me
 stevengtdong@gmail.com
