@@ -21,6 +21,8 @@
 
 你只需要有一张被信任的 CA （ Certificate Authority ）也就是证书授权中心颁发的 SSL 安全证书，并且将它部署到你的网站服务器上。一旦部署成功后，当用户访问你的网站时，浏览器会在显示的网址前加一把小绿锁，表明这个网站是安全的，当然同时你也会看到网址前的前缀变成了 https ，不再是 http 了。
 
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/HTTPvsHTTPS.jpg)
+
 httpvshttps
 
 5、怎么获得 SSL 安全证书呢？
@@ -30,13 +32,15 @@ httpvshttps
 
 ♦ Let’s Encrypt 及 Certbot 简介
 前面已经介绍过， Let’s Encrypt 是 一个叫 ISRG （ Internet Security Research Group ，互联网安全研究小组）的组织推出的免费安全证书计划。参与这个计划的组织和公司可以说是互联网顶顶重要的先驱，除了前文提到的三个牛气哄哄的发起单位外，后来又有思科（全球网络设备制造商执牛耳者）、 Akamai 加入，甚至连 Linux 基金会也加入了合作，这些大牌组织的加入保证了这个项目的可信度和可持续性。
-![](https://img-blog.csdn.net/20180408222341674?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5NTk0NzA1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+
 
 后来 ISRG 的发起者 EFF （电子前哨基金会）为 Let’s Encrypt 项目发布了一个官方的客户端 Certbot ，利用它可以完全自动化的获取、部署和更新安全证书。这真是非常容易、方便呀，所以我们就可以直接使用官方客户端，不需要再使用第三方的工具了。虽然第三方工具也可以使用，但是官方工具更权威，风险也更小，而且遇到问题也更容易解决，毕竟有官方的支持。何况 Certbot 确实非常方便，也比所有的第三方工具都更方便，何乐而不用呢?
 
 ♦官方客户端 Certbot 使用方法
 Certbot 的官方网站是 https://certbot.eff.org/ ，打开这个链接选择自己使用的 web server 和操作系统，EFF 官方会给出详细的使用方法，如下图，不过我觉得这样还是太复杂，太麻烦，所以建议读者朋友可以不用看这个网站，按照我的方法走一遍即可。我自己的个人网站（ https://dgtlinux.xin ）是按此方法配置，以下以网站（ dgtlinux.xin ）举例。
-![](https://img-blog.csdn.net/20180408222840353?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5NTk0NzA1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/Certbot.jpg)
 
 ## 配置
 > 当前工作目录为root
