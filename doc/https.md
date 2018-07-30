@@ -1,15 +1,13 @@
 # https免费证书配置
 ## 背景
 1、http 和 https 是什么？
-![](https://img-blog.csdn.net/20180408222149490?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5NTk0NzA1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
-简单来说，http 是一个传输网页内容的协议，比如你看到的 http 开头的网站 http://www.163.com，其网页上的文字、图片、 CSS 、 JS 等文件都是通过 http 协议传输到我们的浏览器，然后被我们看到。
+简单来说，http 是一个传输网页内容的协议，比如你看到的 http 开头的网站 http://www.163.com, 其网页上的文字、图片、 CSS 、 JS 等文件都是通过 http 协议传输到我们的浏览器，然后被我们看到。
 而 https 可以理解为“ HTTP over SSL/TLS ”，好端端的 http 为什么需要“ over SSL/TLS ”呢，因为 http 是明文传输的，通过 http 协议传输的内容很容易被偷看和篡改，为了安全（你肯定不想被人偷看或者篡改网页内容吧，比如网站银行密码什么的。）就为 http 协议再加上了一层 SSL/TLS 安全协议，所以就有了 https 。
 
 2、SSL/TLS 是什么？
 
 “ HTTP over SSL/TLS ”字面意思就是带“安全套接层”的 http 协议，内心纯洁的同学也可以理解为“带安全套的 http ”，因为带了安全套，所以当然会比较安全（/(ㄒoㄒ)/~~）。其中 SSL 是“ Secure Sockets Layer ” 的缩写，是“安全套接层”的意思。 TLS 是 “Transport Layer Security” 的缩写，是 ” 传输层安全协议 ” 的意思。 SSL 和 TLS 是同一个东西的不同阶段，理解为同一个东西也行，都是安全协议就对了。
-![这里写图片描述](https://img-blog.csdn.net/20180408223602874?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5NTk0NzA1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
 
 3、为什么要部署 https？
 
@@ -18,7 +16,7 @@
 4、怎么部署 https 呢？
 
 你只需要有一张被信任的 CA （ Certificate Authority ）也就是证书授权中心颁发的 SSL 安全证书，并且将它部署到你的网站服务器上。一旦部署成功后，当用户访问你的网站时，浏览器会在显示的网址前加一把小绿锁，表明这个网站是安全的，当然同时你也会看到网址前的前缀变成了 https ，不再是 http 了。
-![](https://img-blog.csdn.net/2018040822231322?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM5NTk0NzA1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70)
+
 httpvshttps
 
 5、怎么获得 SSL 安全证书呢？
