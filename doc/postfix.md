@@ -1,4 +1,5 @@
 # postfix
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/mysza.gif)
 
 ## 简介
 
@@ -49,6 +50,8 @@ postfix通过一系列的措施来提高系统的安全性，这些措施包括�
 3.Postfix的各种进程不在其他用户进程的控制之下运行，而是运行在驻留主进程master的控制之下，与其他用户进程无父子关系，所以有很好的绝缘性。</br>
 4.Postfix的队列文件有其特殊的格式，只能被postfix本身识别；</br>
 **处理过程**
+
+![image]()
 
 ### 接收邮件的过程
 当postfix接收到一封新邮件时，新邮件首选在incoming队列处停留，然后针对不同的情况进行不同的处理：
