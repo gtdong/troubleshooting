@@ -10,7 +10,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
   * [linux](#linux)
   * [webserver](#webserver)
   * [blockchain](#blockchain)
-  * [应用](#应用)
+  * [application](#application)
 
 ## Programming
 
@@ -38,7 +38,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [postfix](doc/postfix.md)
 * [postfix加密](doc/postfix加密.md)
 
-### 应用
+### application
 * [seafile](doc/seafile.md)
 
 
