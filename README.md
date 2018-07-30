@@ -7,7 +7,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
   
   
 * [System](#System)
-  * [operation syatem](#operation syatem)
+  * [operation system](#operation system)
   * [webserver](#webserver)
   * [blockchain](#blockchain)
   * [应用](#应用)
