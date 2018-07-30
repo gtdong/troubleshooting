@@ -51,7 +51,7 @@ postfix通过一系列的措施来提高系统的安全性，这些措施包括�
 4.Postfix的队列文件有其特殊的格式，只能被postfix本身识别；</br>
 **处理过程**
 
-![image]()
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/sasl.png)
 
 ### 接收邮件的过程
 当postfix接收到一封新邮件时，新邮件首选在incoming队列处停留，然后针对不同的情况进行不同的处理：
