@@ -6,7 +6,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [github中的README语法](doc/github中的README.md语法.md)
 * [git多账户配置](doc/git多账户配置.md)
 * [node多版本管理](doc/node多版本管理.md)
-* [最大文件打开数限制](doc/最大文件打开数限制.md)
+* [操作系统](#操作系统)
 * [https配置](doc/https.md)
 * [postfix](doc/postfix.md)
 * [postfix加密](doc/postfix加密.md)
@@ -15,5 +15,8 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [eos](doc/eos.md)
 * [tinychain](doc/tinychain.md)
 * [seafile](doc/seafile.md)
+### 操作系统
+
+* [最大文件打开数限制](doc/最大文件打开数限制.md)
 ### Contact me
 stevengtdong@gmail.com
