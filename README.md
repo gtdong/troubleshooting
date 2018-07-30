@@ -5,19 +5,19 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 
 ## Contents
 
-* [Programming](#Programming)
+* [programming](#programming)
   * [git](#git)
   * [nodejs](#nodejs)
   
-* [System&Service](#System&Service)
+* [system&Service](#system&Service)
   * [shell](#shell)
   * [webservice](#webservice)
   
-* [Project](#Project)
+* [project](#project)
   * [blockchain](#blockchain)
   * [application](#application)
   
-## Programming
+## programming
 
 ### git
 
@@ -27,9 +27,9 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 ### nodejs
 * [node多版本管理](doc/node多版本管理.md)
 
-## System&Service
+## system&Service
 
-### Shell
+### shell
 
 * [最大文件打开数限制](doc/最大文件打开数限制.md)
 
