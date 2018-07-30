@@ -22,7 +22,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 
 ## System
 
-### operation syatem
+### operation system
 
 * [最大文件打开数限制](doc/最大文件打开数限制.md)
 
