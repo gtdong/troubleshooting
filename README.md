@@ -1,7 +1,7 @@
 # Linuxtroubleshooting
 ### Mission
 My mission is to build a home for those who have trouble in using linux.Here I give some troubleshooting examples when using linux.Welcome to communicate with me!
-## 目录
+## Contents
 * [语言类](#语言类)
   * [语言](#语言)
   
