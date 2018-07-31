@@ -37,6 +37,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [https配置](doc/https.md)
 * [postfix](doc/postfix.md)
 * [postfix加密](doc/postfix加密.md)
+* [apache&nginx](doc/apache&nginx跳转.md)
 
 ## Project
 
