@@ -1,7 +1,7 @@
-#EOS Testing Environment on ubuntu 16.04
-##Environment configuration
+# EOS Testing Environment on ubuntu 16.04
+## Environment configuration
 
-###1. Install the development toolkit:
+### 1. Install the development toolkit:
      sudo apt-get update
 	 wget -O - https://apt.llvm.org/llnapshot.gpg.key|sudo apt-key add -
 	 sudo apt-get install clang-4.0 lldb-4.0 libclang-4.0-dev cmake make \
@@ -10,7 +10,7 @@
 	 libbz2-dev libicu-dev python-dev \
 	 autoconf libtool git
 
-###2. Install Boost 1.64:
+### 2. Install Boost 1.64:
 	cd ~
 	wget -c 'https://sourceforge.net/projects/boost/files/boost/1.64.0/boost_1_64_0.tar.bz2/download' -O boost_1.64.0.tar.bz2
 	tar xjf boost_1.64.0.tar.bz2
@@ -21,7 +21,7 @@
 	./b2 install
 	source ~/.bash_profile
 
-###3. Install secp256k1-zkp (Cryptonomex branch):
+### 3. Install secp256k1-zkp (Cryptonomex branch):
 	cd ~
 	git clone https://github.com/cryptonomex/secp256k1-zkp.git
 	cd secp256k1-zkp
@@ -30,7 +30,7 @@
 	make
 	sudo make install
 
-###4. To use the WASM compiler, EOS has an external dependency on binaryen:
+### 4. To use the WASM compiler, EOS has an external dependency on binaryen:
 	  cd ~
 	  git clone https://github.com/WebAssembly/binaryen.git
 	  cd ~/binaryen
@@ -39,7 +39,7 @@
 	  echo "export BINARYEN_ROOT=~/binaryen" >> ~/.bash_profile
 	  source ~/.bash_profile
 
-###5. By default LLVM and clang do not include the WASM build target, so you will have to build it yourself:
+### 5. By default LLVM and clang do not include the WASM build target, so you will have to build it yourself:
 	  mkdir  ~/wasm-compiler
 	  cd ~/wasm-compiler
 	  git clone --depth 1 --single-branch --branch release_40 https://github.com/llvm-mirror/llvm.git
@@ -50,12 +50,12 @@
 	  cd build
 	  cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX=.. -DLLVM_TARGETS_TO_BUILD= -DLLVM_EXPERIMENTAL_TARGETS_TO_BUILD=WebAssembly -DCMAKE_BUILD_TYPE=Release ../
 	  make -j4 install
-##Building EOS and running a node
-###1.Getting the code
+## Building EOS and running a node
+### 1.Getting the code
 To download all of the code, download EOS source code and a recursion or two of submodules. The easiest way to get all of this is to do a recursive clone:
 
      git clone https://github.com/eosio/eos --recursive
-###2.Building from source code
+### 2.Building from source code
 The `WASM_LLVM_CONFIG`environment variable is used to find our recently built WASM compiler. This is needed to compile the example contracts inside `eos/contracts `folder and their respective tests.
 
 	cd ~
@@ -65,7 +65,7 @@ The `WASM_LLVM_CONFIG`environment variable is used to find our recently built WA
 	echo "export LLVM_DIR=/usr/lib/llvm-4.0/lib/cmake/llvm" >> ~/.bash_profile
 	cmake -DBINARYEN_BIN=~/binaryen/bin -DOPENSSL_ROOT_DIR=/usr/local/opt/openssl -DOPENSSL_LIBRARIES=/usr/local/opt/openssl/lib ..
 	make -j4
-###3.Creating and launching a single-node testnet
+### 3.Creating and launching a single-node testnet
 After successfully building the project, the eosd binary should be present in the `build/programs/eosd` directory. Go ahead and run eosd -- it will probably exit with an error, but if not, close it immediately with Ctrl-C. Note that eosd created a directory named `data-dir` containing the default configuration (`config.ini`) and some other internals. This default data storage path can be overridden by passing `--data-dir /path/to/data` to eosd.
 
 Edit the config.ini file, adding/updating the following settings to the defaults already in place:
@@ -117,14 +117,14 @@ When running eosd you should get log messages similar to below. It means the blo
 				...
 				
 
-##Example "Currency" Contract Walkthrough
+## Example "Currency" Contract Walkthrough
 EOS comes with example contracts that can be uploaded and run for testing purposes. Next we demonstrate how to upload and interact with the sample contract "currency".
-###1.First, run the node
+### 1.First, run the node
 
 	cd ~/eos/build/programs/eosd/
 	./eosd
 
-###2.Setting up a wallet and importing account key
+### 2.Setting up a wallet and importing account key
 As you've previously added `plugin = eosio::wallet_api_plugin` into config.ini, EOS wallet will be running as a part of eosd process. Every contract requires an associated account, so first, create a wallet.
 
 	cd ~/eos/build/programs/eosc/
@@ -133,7 +133,7 @@ For the purpose of this walkthrough, import the private key of the inita account
 
 	./eosc wallet import 5KQwrPbwdL6PhXujxW37FSSQZ1JiwsST4cqQzDeyXtP79zkvFD3
 	
-###3.Creating accounts for sample "currency" contract
+### 3.Creating accounts for sample "currency" contract
 First, generate some public/private key pairs that will be later assigned as owner_key and active_key.
 
 	cd ~/eos/build/programs/eosc/
@@ -169,7 +169,7 @@ Now import the active private key generated previously in the wallet:
 
 	./eosc wallet import XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
-###4.Upload sample "currency" contract to blockchain
+### 4.Upload sample "currency" contract to blockchain
 Before uploading a contract, verify that there is no current contract:
 
 	./eosc get code currency
@@ -197,7 +197,7 @@ Next verify the currency contract has the proper initial balance:
 	  "more": false
 	}
 
-###5.Transfering funds with the sample "currency" contract
+### 5.Transfering funds with the sample "currency" contract
 Anyone can send any message to any contract at any time, but the contracts may reject messages which are not given necessary permission. Messages are not sent "from" anyone, they are sent "with permission of" one or more accounts and permission levels. The following commands show a "transfer" message being sent to the "currency" contract.
 
 The content of the message is 
@@ -213,7 +213,7 @@ We specify the `--scope` ... argument to give the currency contract read/write p
 As confirmation of a successfully submitted transaction, you will receive JSON output that includes a transaction_id field.
 
 
-###6.Reading sample "currency" contract balance
+### 6.Reading sample "currency" contract balance
 So now check the state of both of the accounts involved in the previous transaction.
 
 	./eosc get table inita currency account
@@ -238,7 +238,7 @@ As expected, the receiving account inita now has a balance of 50 tokens, and the
 
 
 
-##Running a local node connected to the public testnet
+## Running a local node connected to the public testnet
 To run a local node connected to the public testnet operated by block.one, a script is provided.
 
 	cd ~/eos/build/scripts
@@ -276,7 +276,7 @@ The current workaround is to edit your `config.ini` file and use something
 unique for `"p2p-server-address"`
 The suggestion is to use your **external IP** address.
 …
-##Running multi-node local testnet
+## Running multi-node local testnet
 To run a local testnet you can use a launcher application provided in the `~/eos/build/programs/launcher` folder.
 
 For testing purposes you will run two local production nodes talking to each other.
