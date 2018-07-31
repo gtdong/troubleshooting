@@ -1,8 +1,6 @@
 
 ### apache&nginx跳转
-1. apache301重定向  
 
-       Redirect 301 /123/index.html http://www.qq.com/
 2.地址跳转</br>
 A．	什么是地址跳转？
 地址跳转，又叫URL（统一资源定位符）跳转。简单来说，就是当你访问a网址时，服务器直接跳转到b网址。举个例子：当你浏览器的地址栏输入www.abc.com时，服务器直接跳转到www.cde.com。
@@ -19,24 +17,24 @@ a.	apache地址跳转配置（www.abc.com跳转到www.cde.com）
         Include conf/extra/httpd-vhosts.conf
 
     (2）vim /usr/local/apache2/conf/extra/httpd-vhosts.conf 
-     <VirtualHost *:80>
-     DocumentRoot "/usr/local/apache2/htdocs/abc"
-     ServerName www.abc.com
-     </VirtualHost>
-    <Directory "/usr/local/apache2/htdocs/abc">
-        options indexes followsymlinks
-        allowoverride All
-        require all granted
-    </Directory>
-    <VirtualHost *:80>
-    DocumentRoot "/usr/local/apache2/htdocs/cde"
-    ServerName www.cde.com
-    </VirtualHost>
+        <VirtualHost *:80>
+         DocumentRoot "/usr/local/apache2/htdocs/abc"
+         ServerName www.abc.com
+        </VirtualHost>
+        <Directory "/usr/local/apache2/htdocs/abc">
+         options indexes followsymlinks
+         allowoverride All
+         require all granted
+        </Directory>
+        <VirtualHost *:80>
+         DocumentRoot "/usr/local/apache2/htdocs/cde"
+         ServerName www.cde.com
+        </VirtualHost>
 
     （3）cd /htdocs/abc    vi .htaccess
-     rewriteengine on
-     rewritecond %{HTTP_HOST} www.abc.com
-     rewriterule .* http://www.cde.com
+         rewriteengine on
+         rewritecond %{HTTP_HOST} www.abc.com
+         rewriterule .* http://www.cde.com
 
 b.	nginx地址跳转配置     
 
