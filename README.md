@@ -39,6 +39,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [postfix](doc/postfix.md)
 * [postfix加密](doc/postfix加密.md)
 * [apache&nginx](doc/apache&nginx跳转.md)
+* [证书链不完整](doc/证书链不完整.md)
 
 ## Project
 
