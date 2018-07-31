@@ -1,5 +1,7 @@
-1. apache301重定向     
- 
+
+### apache&nginx跳转
+1. apache301重定向  
+
        Redirect 301 /123/index.html http://www.qq.com/
 2.地址跳转</br>
 A．	什么是地址跳转？
@@ -9,12 +11,12 @@ B．	配置地址跳转
 a.	apache地址跳转配置（www.abc.com跳转到www.cde.com）     
 
     (1）vim /usr/local	/apache2/conf/htttpd.conf   
-开启虚拟主机模块    <br>
-LoadModule vhost_alias_module modules/mod_vhost_alias.so</br>
-开启网页重写模块    </br>
-LoadModule rewrite_module modules/mod_rewrite.so      
-加载模块    
-Include conf/extra/httpd-vhosts.conf
+        开启虚拟主机模块    <br>
+        LoadModule vhost_alias_module modules/mod_vhost_alias.so</br>
+        开启网页重写模块    </br>
+        LoadModule rewrite_module modules/mod_rewrite.so      
+        加载模块    
+        Include conf/extra/httpd-vhosts.conf
 
     (2）vim /usr/local/apache2/conf/extra/httpd-vhosts.conf 
      <VirtualHost *:80>
