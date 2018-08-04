@@ -12,10 +12,10 @@
     make
     make altinstall
 
-python3.6程序的执行文件：/usr/local/bin/python3.6
-python3.6应用程序目录：/usr/local/lib/python3.6
-pip3的执行文件：/usr/local/bin/pip3.6
-pyenv3的执行文件：/usr/local/bin/pyenv-3.6
+    python3.6程序的执行文件：/usr/local/bin/python3.6
+    python3.6应用程序目录：/usr/local/lib/python3.6
+    pip3的执行文件：/usr/local/bin/pip3.6
+    pyenv3的执行文件：/usr/local/bin/pyenv-3.6
 
 
 更改/usr/bin/python链接
