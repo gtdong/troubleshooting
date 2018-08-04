@@ -8,6 +8,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [programming](#programming)
   * [git](#git)
   * [nodejs](#nodejs)
+  * [python](#python)
   
 * [system_service](#system_service)
   * [shell](#shell)
@@ -26,6 +27,9 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 
 ### nodejs
 * [node多版本管理](doc/node多版本管理.md)
+
+### python
+* [python安装](doc/python安装.md)
 
 ## system_service
 
