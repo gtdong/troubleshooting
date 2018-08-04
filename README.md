@@ -52,6 +52,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 
 ### application
 * [seafile](doc/seafile.md)
+* [ssr](doc/ssr.md)
 
 
 
