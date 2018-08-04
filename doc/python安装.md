@@ -17,7 +17,6 @@ python3.6应用程序目录：/usr/local/lib/python3.6
 pip3的执行文件：/usr/local/bin/pip3.6
 pyenv3的执行文件：/usr/local/bin/pyenv-3.6
 
---------------------------------------------------------------
 
 更改/usr/bin/python链接
 
@@ -40,7 +39,6 @@ pyenv3的执行文件：/usr/local/bin/pyenv-3.6
 
     #!/usr/bin/python 改为 #!/usr/bin/python2
 
--------------------------------------------------------------
 常用的科学计算、数据挖掘机器学习等python第三方库主要有：Numpy、Scipy、Matplotlib、Pandas、StatsModels、Scikit-Learn、Keras、Gensim
 
     pip install 库名 
