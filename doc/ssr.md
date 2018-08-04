@@ -1,11 +1,18 @@
 ## ssr科学上网搭建
 
-### requirement
+### Requirements
 * 一台国外的服务器,任意品牌即可。
 这里我是用的是[BandwagonHost](https://bandwagonhost.com/),一款性价比比较高的vps服务器，大家可以试一试。
 
-### setup
+### Setup
 
+配置过程很简单，采用一键安装脚本配置，具体配置跟着指示一步一步来即可：</br>
+
+1.进入安装脚本后输入数字 1 开始安装</br>
+2.然后配置端口、加密、方式，这些可以默认回车，也可以按自己的需要配置。这三个选项配好就可以使用啦，其他的选项根据自己的需求配置即可，或者默认就行。</br>
+3.配置完成，你的帐号信息就会显示到屏幕上</br>
+4.最后一步选择一款客户端输入你的帐号相关信息就可以啦</br>
+    
     $ yum -y install wget
 
     $ wget -N --no-check-certificate https://softs.fun/Bash/ssr.sh && chmod +x ssr.sh && bash ssr.sh
