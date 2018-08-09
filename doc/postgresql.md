@@ -48,7 +48,11 @@ host     all      all   127.0.0.1/32  md5
 host     all      all   ::1/128       md5
 ```
 
-TYPE定义了多种连接PostgreSQL的方式，分别是：“local”使用本地unix套接字，“host”使用TCP/IP连接（包括SSL和非SSL），“host”结合“IPv4地址”使用IPv4方式，结合“IPv6地址”则使用IPv6方式，“hostssl”只能使用SSL TCP/IP连接，“hostnossl”不能使用SSL TCP/IP连接。
+TYPE定义了多种连接PostgreSQL的方式，分别是：
+* `local`使用本地unix套接字，
+* `host`使用TCP/IP连接（包括SSL和非SSL），
+* `host`结合“IPv4地址”使用IPv4方式，结合“IPv6地址”则使用IPv6方式，
+* `hostssl`只能使用SSL TCP/IP连接，“hostnossl”不能使用SSL TCP/IP连接。
 DATABASE指定哪个数据库，多个数据库，库名间以逗号分隔。“all”只有在没有其他的符合条目时才代表“所有”，如果有其他的符合条目则代表“除了该条之外的”，因为“all”的优先级最低。如下例：
 ```
 local    db1      user1      reject
