@@ -99,6 +99,37 @@ pg_hba.conf修改后，使用pg_ctl reload重新读取pg_hba.conf文件，如果
 
 另：PostgreSQL默认只监听本地端口，用netstat -tuln只会看到“tcp 127.0.0.1:5432 LISTEN”。修改postgresql.conf中的listen_address=*，监听所有端口，这样远程才能通过TCP/IP登录数据库，用netstat -tuln会看到“tcp 0.0.0.0:5432 LISTEN”。
 
+### pg_ident.conf文件简析
+
+dent认证方式，需要建立映射用户或具备同名用户。
+
+同名用户好办，各新建一个同名的操作系统用户和数据库用户，两个用户密码不必相同，但名字必须相同。用该用户登录到操作系统或su到该用户后，即可$ psql dbname。
+
+如果不想新建同名用户，也可以配置pg_ident.conf文件。pg_ident.conf用来配置哪些操作系统用户可以映射为数据库用户。本文以PostgreSQL 9为例。
+
+pg_ident.conf的格式如下：
+
+    # MAPNAME    SYSTEM-USERNAME    PG-USERNAME
+    usermap      username           dbuser
+usermap为映射名，要在pg_hba.conf中用到，多个映射可以共用同一个映射名，username为操作系统用户名，dbuser为映射到的数据库用户。
+
+　
+
+例：操作系统用户userzy，使用数据库用户dbzy连接数据库，而操作系统用户userok，使用数据库用户dbok连接数据库。
+
+pg_ident.conf如下：
+
+    # MAPNAME    SYSTEM-USERNAME    PG-USERNAME
+    mapzy　　　　userzy　　　　　　　　dbzy
+    mapzy　　　　userok　　　　　　　　dbok
+pg_hba.conf如下：
+
+    # TYPE  DATABASE  USER  CIDR-ADDRESS  METHOD
+    local    all      all                 ident  map=mapzy
+map为pg_hba.conf的auth-options项，map=mapzy指示该认证条件使用mapzy映射。指定映射后原本的同名操作系统用户就不能连接数据库了。
+
+
+
 
 
 
