@@ -81,9 +81,9 @@ local    all      all        ident
 3、信任192.168.1.10登录数据库：
     host    all    all    192.168.1.10/32    trust
 ```
-pg_hba.conf修改后，使用pg_ctl reload重新读取pg_hba.conf文件，如果pg_ctl找不到数据库，则用-D /.../pgsql/data/　指定数据库目录，或export PGDATA=/.../pgsql/data/　导入环境变量。
+    pg_hba.conf修改后，使用pg_ctl reload重新读取pg_hba.conf文件，如果pg_ctl找不到数据库，则用-D /.../pgsql/data/　指定数据库目录，或export PGDATA=/.../pgsql/data/　导入环境变量。
 
-另：PostgreSQL默认只监听本地端口，用netstat -tuln只会看到“tcp 127.0.0.1:5432 LISTEN”。修改postgresql.conf中的listen_address=*，监听所有端口，这样远程才能通过TCP/IP登录数据库，用netstat -tuln会看到“tcp 0.0.0.0:5432 LISTEN”。
+    另：PostgreSQL默认只监听本地端口，用netstat -tuln只会看到“tcp 127.0.0.1:5432 LISTEN”。修改postgresql.conf中的listen_address=*，监听所有端口，这样远程才能通过TCP/IP登录数据库，用netstat -tuln会看到“tcp 0.0.0.0:5432 LISTEN”。
 ### pg_ident.conf文件简析
 ident认证方式，需要建立映射用户或具备同名用户。
 同名用户好办，各新建一个同名的操作系统用户和数据库用户，两个用户密码不必相同，但名字必须相同。用该用户登录到操作系统或su到该用户后，即可$ psql dbname。
