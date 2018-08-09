@@ -55,19 +55,20 @@ local    all      all        ident
 ```
 这两条都是指定local访问方式，因为前一条指定了特定的数据库db1，所以后一条的all代表的是除了db1之外的数据库，同理用户的all也是这个道理。
 
-USER指定哪个数据库用户（PostgreSQL正规的叫法是角色，role）。多个用户以逗号分隔。
+**USER**指定哪个数据库用户（PostgreSQL正规的叫法是角色，role）。多个用户以逗号分隔。
 
-CIDR-ADDRESS项local方式不必填写，该项可以是IPv4地址或IPv6地址，可以定义某台主机或某个网段。
+**CIDR-ADDRESS**项local方式不必填写，该项可以是IPv4地址或IPv6地址，可以定义某台主机或某个网段。
 
-METHOD指定如何处理客户端的认证。常用的有ident，md5，password，trust，reject。
-ident是Linux下PostgreSQL默认的local认证方式，凡是能正确登录服务器的操作系统用户（注：不是数据库用户）就能使用本用户映射的数据库用户不需密码登录数据库。
+**METHOD**指定如何处理客户端的认证。常用的有ident，md5，password，trust，reject。
+**ident**是Linux下PostgreSQL默认的local认证方式，凡是能正确登录服务器的操作系统用户（注：不是数据库用户）就能使用本用户映射的数据库用户不需密码登录数据库。
 
 解决方案：1、在pg_ident.conf中添加映射用户；2、改变认证方式。
-
+```
 md5是常用的密码认证方式，如果你不使用ident，最好使用md5。密码是以md5形式传送给数据库，较安全，且不需建立同名的操作系统用户。</br>
 password是以明文密码传送给数据库，建议不要在生产环境中使用。</br>
 trust是只要知道数据库用户名就不需要密码或ident就能登录，建议不要在生产环境中使用。</br>
 reject是拒绝认证。
+```
 
 本地使用psql登录数据库，是以unix套接字的方式，附合local方式。
 使用PGAdmin3或php登录数据库，不论是否本地均是以TCP/IP方式，附合host方式。如果是本地（数据库地址localhost），CIDR-ADDRESS则为127.0.0.1/32。
