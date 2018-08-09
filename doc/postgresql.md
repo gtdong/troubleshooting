@@ -76,7 +76,7 @@ local方式不必填写，该项可以是IPv4地址或IPv6地址，可以定义�
 * `trust`是只要知道数据库用户名就不需要密码或ident就能登录，建议不要在生产环境中使用。</br>
 * `reject`是拒绝认证。
 
-#### 本地使用psql登录数据库，是以unix套接字的方式，附合local方式。使用PGAdmin3或php登录数据库，不论是否本地均是以TCP/IP方式，附合host方式。如果是本地（数据库地址localhost），CIDR-ADDRESS则为127.0.0.1/32。例：
+本地使用psql登录数据库，是以unix套接字的方式，附合local方式。使用PGAdmin3或php登录数据库，不论是否本地均是以TCP/IP方式，附合host方式。如果是本地（数据库地址localhost），CIDR-ADDRESS则为127.0.0.1/32。例：
 ```
 1、允许本地使用PGAdmin3登录数据库，数据库地址localhost，用户user1，数据库user1db：
     host    user1db    user1    127.0.0.1/32    md5
@@ -86,7 +86,8 @@ local方式不必填写，该项可以是IPv4地址或IPv6地址，可以定义�
     host    all    all    192.168.1.10/32    trust
 ```
 
-#### 注:pg_hba.conf修改后，使用pg_ctl reload重新读取pg_hba.conf文件，如果pg_ctl找不到数据库，则用-D /.../pgsql/data/指定数据库目录，或export PGDATA=/.../pgsql/data/　导入环境变量。PostgreSQL默认只监听本地端口，用netstat -tuln只会看到tcp 127.0.0.1:5432 LISTEN。修改postgresql.conf中的listen_address=*，监听所有端口，这样远程才能通过TCP/IP登录数据库，用netstat -tuln会看到tcp 0.0.0.0:5432 LISTEN。**
+#### 注:
+pg_hba.conf修改后，使用pg_ctl reload重新读取pg_hba.conf文件，如果pg_ctl找不到数据库，则用-D /.../pgsql/data/指定数据库目录，或export PGDATA=/.../pgsql/data/　导入环境变量。PostgreSQL默认只监听本地端口，用netstat -tuln只会看到tcp 127.0.0.1:5432 LISTEN。修改postgresql.conf中的listen_address=*，监听所有端口，这样远程才能通过TCP/IP登录数据库，用netstat -tuln会看到tcp 0.0.0.0:5432 LISTEN。**
 
 ### pg_ident.conf文件简析
 ident认证方式，需要建立映射用户或具备同名用户。
