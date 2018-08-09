@@ -1,6 +1,6 @@
 ## postgresql
-------------------
-### Install
+
+### Installing
 **1.实验环境:** RHEL-7.5
 
 **2.安装:**:
