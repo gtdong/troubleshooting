@@ -87,9 +87,9 @@ local方式不必填写，该项可以是IPv4地址或IPv6地址，可以定义�
 3、信任192.168.1.10登录数据库：
     host    all    all    192.168.1.10/32    trust
 ```
-    pg_hba.conf修改后，使用pg_ctl reload重新读取pg_hba.conf文件，如果pg_ctl找不到数据库，则用-D /.../pgsql/data/　指定数据库目录，或export PGDATA=/.../pgsql/data/　导入环境变量。
 
-**注：PostgreSQL默认只监听本地端口，用`netstat -tuln`只会看到`tcp 127.0.0.1:5432 LISTEN`。修改postgresql.conf中的`listen_address=*`，监听所有端口，这样远程才能通过TCP/IP登录数据库，用`netstat -tuln`会看到`tcp 0.0.0.0:5432 LISTEN`。**
+**注:pg_hba.conf修改后，使用`pg_ctl reload`重新读取pg_hba.conf文件，如果pg_ctl找不到数据库，则用`-D /.../pgsql/data/`　指定数据库目录，或`export PGDATA=/.../pgsql/data/`　导入环境变量。
+PostgreSQL默认只监听本地端口，用`netstat -tuln`只会看到`tcp 127.0.0.1:5432 LISTEN`。修改postgresql.conf中的`listen_address=*`，监听所有端口，这样远程才能通过TCP/IP登录数据库，用`netstat -tuln`会看到`tcp 0.0.0.0:5432 LISTEN`。**
 
 ### pg_ident.conf文件简析
 ident认证方式，需要建立映射用户或具备同名用户。
