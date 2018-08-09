@@ -156,6 +156,19 @@ ALTER TABLE user_tbl RENAME TO backup_tbl;
 DROP TABLE IF EXISTS backup_tbl;
 ```
 
+### psql备份与还原
+
+备份：
+
+    pg_dump -U postgres -d myDBname -f dump.sql
+其中
+postgres是用户名
+myDBname是数据库名
+dump.sql是文件名
+还原：
+
+    createdb newDBname
+    psql -d newDBname -U postgres -f dump.sql
 
 
 
