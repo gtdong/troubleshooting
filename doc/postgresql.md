@@ -21,7 +21,7 @@ ALTER USER postgres WITH PASSWORD 'password';
 
 # 客户端认证配置
 $ vim /var/lib/pgsql/data/pg_hba.conf
-常用配置
+  常用配置
     # TYPE  DATABASE        USER            ADDRESS                 METHOD
     # "local" is for Unix domain socket connections only
     local   all             all                                     md5
