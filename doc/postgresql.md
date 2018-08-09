@@ -82,7 +82,7 @@ reject是拒绝认证。
 3、信任192.168.1.10登录数据库：
     host    all    all    192.168.1.10/32    trust
 ```
-　
+
 pg_hba.conf修改后，使用pg_ctl reload重新读取pg_hba.conf文件，如果pg_ctl找不到数据库，则用-D /.../pgsql/data/　指定数据库目录，或export PGDATA=/.../pgsql/data/　导入环境变量。
 
 另：PostgreSQL默认只监听本地端口，用netstat -tuln只会看到“tcp 127.0.0.1:5432 LISTEN”。修改postgresql.conf中的listen_address=*，监听所有端口，这样远程才能通过TCP/IP登录数据库，用netstat -tuln会看到“tcp 0.0.0.0:5432 LISTEN”。
