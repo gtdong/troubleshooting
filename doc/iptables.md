@@ -5,7 +5,7 @@
 	* [2.防火墙实现功能](#2.防火墙实现功能:)
 	* [3.防火墙过滤器](#3.防火墙过滤器)
 	* [4.规则表&规则链](#4.规则表&规则链)
-* [iptables安装配置](#iptables安装配置)
+* [iptables配置实例](#iptables安装配置)
 * [iptables使用](#iptables使用)
 * [iptables配置实例](#iptables配置实例)
 	
