@@ -58,6 +58,21 @@
 >> POSTROUTING链：在进行路由选择后处理数据包  
 >> PREROUTING链：在进行路由选择前处理数据包
 
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/ip3.jpeg)
+
+**应用顺序**  
+规则表之间的顺序  
+>> raw—mangle—nat—filter
+
+规则链之间的顺序
+>> 入站：PREROUTING  INPUT  
+>> 出站：OUTPUT  POSTROUTING  
+>> 转发：PREROUTING  FORWARD  POSTROUTING
+
+规则链内的匹配顺序
+>> 按顺序依次检查，匹配即停止（LOG策略例外）
+>> 找不到相匹配规则，则按该链的默认策略处理
+
 
 
 
