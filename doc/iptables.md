@@ -26,7 +26,7 @@
 	kernel 3.13.x 	netfilter	firewall
 	
    tcp数据包结构
-   ![image]()
+   ![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/ip1.png)
 
 
 
