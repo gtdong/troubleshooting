@@ -29,7 +29,34 @@
    ![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/ip1.png)
    
    **包过滤简化模式**
-   ![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/ip2.png)
+   ![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/ip2.jpeg)
+   
+### 4.规则表&规则链
+
+**netfilter/iptables 预设的规则表:**	 </br>
+      表作用：容纳各种规则链</br>
+      划分依据：根据防火墙对数据的处理方式
+ 
+**规则表：**</br>
+      raw表：确定是否对该数据包进行状态跟踪   
+      mangle表：为数据包设置标记  
+      nat表：修改数据包中的源、目标IP地址或端口  
+      ilter表：确定是否放行该数据包（过滤）
+
+**netfilter/iptables 预设的规则链:**
+      规则的作用：对数据包进行过滤或处理  
+      链的作用：容纳各种防火墙规则  
+      链的分类依据：处理数据包的不同时机
+	
+**规则链：**
+      INPUT：处理入站数据包  
+      OUTPUT：处理出站数据包  
+      FORWARD：处理转发数据包  
+      POSTROUTING链：在进行路由选择后处理数据包  
+      PREROUTING链：在进行路由选择前处理数据包
+
+
+
 
 
 
