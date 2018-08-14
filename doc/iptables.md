@@ -24,6 +24,9 @@
 	kernel 2.2.x 	firewall 	ipchains
 	kernel 2.4.x 	netfilter	iptables
 	kernel 3.13.x 	netfilter	firewall
+	
+   tcp数据包结构
+   ![image]()
 
 
 
