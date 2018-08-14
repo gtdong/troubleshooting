@@ -1,7 +1,8 @@
 # iptables
-## iptables的定义
-根据维基百科的介绍:</br>
+## iptables原理
 
+## 1.iptables简介
+根据维基百科的介绍:</br>
 iptables是运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分Linux系统上，可使用/usr/sbin/iptables来操作iptables，用户手册在手册页（Man page[2]）中，可以透过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核层级里面iptables API运作功能的模块。因相关动作上的需要，iptables的操作需要用到超级用户的权限。</br>
 目前iptables在2.4、2.6及3.0版本的内核下运作，旧版的Linux内核（2.2）使用ipchains及ipwadm（Linux 2.0）达成类似的功能，2014年1月19日起发行的新版Linux内核（3.13后）则使用nftables取而代之。
 
