@@ -25,8 +25,11 @@
 	kernel 2.4.x 	netfilter	iptables
 	kernel 3.13.x 	netfilter	firewall
 	
-   tcp数据包结构
+   **tcp数据包结构**
    ![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/ip1.png)
+   
+   **包过滤简化模式**
+   ![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/ip2.png)
 
 
 
