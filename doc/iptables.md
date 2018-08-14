@@ -73,6 +73,9 @@
 >> 按顺序依次检查，匹配即停止（LOG策略例外）
 >> 找不到相匹配规则，则按该链的默认策略处理
 
+**数据匹配流程图**
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/ip4.png)
+
 
 
 
