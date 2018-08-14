@@ -1,10 +1,32 @@
-# iptables
-## iptables原理
+# iptables防火墙
+## iptables简介
+   防火墙是指设置在不同网络或网络安全域之间的一系列部件的组合，它能增强机构内部网络的安全性。它通过访问控制机制，确定哪些内部服务允许外部访问。它可以根据网络传输的类型决定IP包是否可以传进或传出内部网。   
+   防火墙通过审查经过的每一个数据包，判断它是否有相匹配的过滤规则，根据规则的先后顺序进行一一比较，直到满足其中的一条规则为止，然后依据控制机制做出相应的动作。如果都不满足，则将数据包丢弃，从而保护网络的安全。
+   
+### 1.防火墙机制：
+   一种机制是拦阻传输流通行  
+	一种机制是允许传输流通过  
+	一些防火墙偏重拦阻传输流的通行，而另一些防火墙则偏重允许传输流通过。
+   
+### 2.防火墙实现功能：
 
-## 1.iptables简介
-根据维基百科的介绍:</br>
-iptables是运行在用户空间的应用软件，通过控制Linux内核netfilter模块，来管理网络数据包的流动与转送。在大部分Linux系统上，可使用/usr/sbin/iptables来操作iptables，用户手册在手册页（Man page[2]）中，可以透过 man iptables 指令获取。通常iptables都需要内核层级的模块来配合运作，Xtables是主要在内核层级里面iptables API运作功能的模块。因相关动作上的需要，iptables的操作需要用到超级用户的权限。</br>
-目前iptables在2.4、2.6及3.0版本的内核下运作，旧版的Linux内核（2.2）使用ipchains及ipwadm（Linux 2.0）达成类似的功能，2014年1月19日起发行的新版Linux内核（3.13后）则使用nftables取而代之。
+   可以保护易受攻击的服务；
+   控制内外网之间网络系统的访问；
+	集中管理内网的安全性，降低管理成本；
+   提高网 络的保密性和私有性；
+   记录网络的使用状态，为安全规划和网络维护提供依据。
+   
+### 3.防火墙过滤器
+
+   netfilter/iptables 分别是内核态模块和用户态工具，netfilter位于Linux内核中的包过滤功能体系，iptables位于/sbin/iptables，用来管理防火墙规则的工具，管理员通过iptables给netfilter变更规则实现防火作用。
+	
+	kernel 2.0.x 	firewall	ipfw
+	kernel 2.2.x 	firewall 	ipchains
+	kernel 2.4.x 	netfilter	iptables
+	kernel 3.13.x 	netfilter	firewall
+
+
+
 
 ## iptables的安装配置 
    
