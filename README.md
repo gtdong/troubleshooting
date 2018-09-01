@@ -26,10 +26,10 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [git多账户配置](doc/git多账户配置.md)
 
 ### nodejs
-* [node多版本管理](doc/node多版本管理.md)
+* [node_install](doc/node多版本管理.md)
 
 ### python
-* [python安装](doc/python安装.md)
+* [python_install](doc/python安装.md)
 
 ## system_service
 
@@ -38,16 +38,16 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [linuxlearning](doc/linux_learning_gtdong.md)
 * [最大文件打开数限制](doc/最大文件打开数限制.md)
 * [系统timewait过多](doc/timewait.md)
-* [ansible自动化运维](doc/ansible.md)
+* [ansible](doc/ansible.md)
 * [iptables](doc/iptables.md)
 
 ### webservice
-* [https配置](doc/https.md)
+* [https](doc/https.md)
 * [postfix](doc/postfix.md)
-* [postfix加密](doc/postfix加密.md)
+* [postfix_ssl](doc/postfix加密.md)
 * [apache&nginx](doc/apache&nginx跳转.md)
 * [证书链不完整](doc/证书链不完整.md)
-* [postgresql安装与使用](doc/postgresql.md)
+* [postgresql](doc/postgresql.md)
 
 ## Project
 
