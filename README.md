@@ -22,8 +22,8 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 
 ### git
 
-* [github中的README语法](doc/github中的README.md语法.md)
-* [git多账户配置](doc/git多账户配置.md)
+* [The README syntax](doc/github中的README.md语法.md)
+* [git_account](doc/git多账户配置.md)
 
 ### nodejs
 * [node_install](doc/node多版本管理.md)
@@ -36,8 +36,8 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 ### shell
 
 * [linuxlearning](doc/linux_learning_gtdong.md)
-* [最大文件打开数限制](doc/最大文件打开数限制.md)
-* [系统timewait过多](doc/timewait.md)
+* [ulimitation of max open files](doc/最大文件打开数限制.md)
+* [too much timewait](doc/timewait.md)
 * [ansible](doc/ansible.md)
 * [iptables](doc/iptables.md)
 
