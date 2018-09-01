@@ -40,6 +40,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [too much timewait](doc/timewait.md)
 * [ansible](doc/ansible.md)
 * [iptables](doc/iptables.md)
+* [Ali cloud SSH login failed](doc/ali-ssh-failed.md)
 
 ### webservice
 * [https](doc/https.md)
