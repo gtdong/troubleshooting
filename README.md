@@ -36,7 +36,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 ### shell
 
 * [linuxlearning](doc/linux_learning_gtdong.md)
-* [ulimitation of max open files](doc/最大文件打开数限制.md)
+* [Modify the maximum number of files to open](doc/最大文件打开数限制.md)
 * [too much timewait](doc/timewait.md)
 * [ansible](doc/ansible.md)
 * [iptables](doc/iptables.md)
@@ -46,7 +46,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [postfix](doc/postfix.md)
 * [postfix_ssl](doc/postfix加密.md)
 * [apache&nginx](doc/apache&nginx跳转.md)
-* [证书链不完整](doc/证书链不完整.md)
+* [Certificate chain is incomplete](doc/证书链不完整.md)
 * [postgresql](doc/postgresql.md)
 
 ## Project
