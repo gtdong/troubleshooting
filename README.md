@@ -49,6 +49,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [apache&nginx](doc/apache&nginx跳转.md)
 * [Certificate chain is incomplete](doc/证书链不完整.md)
 * [postgresql](doc/postgresql.md)
+* [Sql injection](doc/nginx_sql_injection.md)
 
 ## Project
 
