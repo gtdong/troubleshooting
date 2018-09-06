@@ -97,3 +97,4 @@ cat id_rsa.pub >> ~/.ssh/authorized.keys (注意这里要用">>",不要用>,否�
 ansible -u ec2-user webservers -a 'free -m'
 其中: -u指定连接远程主机使用的用户名, webservers代表需要连接的远程主机组(也可以使用all，表示连接所有主机),'free -m'表示钥在远程主机上执行的命令。
 ```
+参考: https://www.cnblogs.com/wzhuo/p/7128502.html
