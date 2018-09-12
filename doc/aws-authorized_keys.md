@@ -5,4 +5,7 @@
 
 
 
-![image](https://)
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/WechatIMG159.jpeg)
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/WechatIMG160.jpeg)
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/WechatIMG161.jpeg)
+![image](https://github.com/gtdong/linuxtroubleshooting/blob/master/images/WechatIMG162.jpeg)
