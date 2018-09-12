@@ -41,6 +41,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [ansible](doc/ansible.md)
 * [iptables](doc/iptables.md)
 * [Ali cloud SSH login failed](doc/ali-ssh-failed.md)
+* [authorized_keys damaged on aws ec2 instance](doc/aws-authorized_keys.md)
 
 ### webservice
 * [https](doc/https.md)
