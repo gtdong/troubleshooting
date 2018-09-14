@@ -34,6 +34,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 ## system_service
 
 ### shell
+* [Operation and maintenance authority allocation](doc/operation-authority-allocation.md)
 * [script](script/)
 * [linuxlearning](doc/linux_learning_gtdong.md)
 * [Modify the maximum number of files to open](doc/最大文件打开数限制.md)
