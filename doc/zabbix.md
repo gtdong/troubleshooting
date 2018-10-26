@@ -30,5 +30,21 @@ https://www.zabbix.com/documentation/
 
 2.乱码设置：   
   在使用中文时可能会出现乱码的问题，解决方法是替换字体：
+  
+     1、从Window服务器找到相应的字休复制到zabbix Server服务器上：
+
+     控制面板-->字体-->选择一种中文字库例如“楷体”（simkai.ttf）
+     
+     2、将字体上传到zabbix server服务器上的字体目录中，/usr/share/zabbix/fonts/    
+     修改此/usr/share/zabbix/include/defines.inc.php文件中字体的配置，将里面关于字体设置从graphfont替换成simkai
+     define('ZBX_GRAPH_FONT_NAME',           'graphfont'); // font file name
+3.时区设置:  
+    很多人在初次安装的时候会出现监控时间和系统时间不一致的情况，这时就需要修改zabbix的时区设置
+    
+     vim /etc/httpd/conf.d/zabbix.conf
+          php_value date.timezone Asia/Shanghai
+     #这里我用的是上海时区
+     
+     
 
 
