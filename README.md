@@ -52,6 +52,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [Certificate chain is incomplete](doc/证书链不完整.md)
 * [postgresql](doc/postgresql.md)
 * [Sql injection](doc/nginx_sql_injection.md)
+* [zabbix](doc/zabbix.md)
 
 ## Project
 
