@@ -81,7 +81,7 @@ https://www.zabbix.com/documentation/
 1.建立告警脚本
 
     # cd /usr/lib/zabbix/alertscript
-    # vim sendEmail.py
+    # vim zabbix-mail.py
       #!/usr/bin/env python
       #coding:utf-8
       import time
@@ -116,13 +116,17 @@ https://www.zabbix.com/documentation/
       
       设置告警脚本的权限
 
-      sudo chmod zabbix:zabbix sendEmail.py
+      sudo chmod zabbix:zabbix szabbix-mail.py
 
-      sudo chown 755 sendEmail.py
+      sudo chown 755 zabbix-mail.py
+      
+ 2.添加报警媒介
     
 ![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix8.png)
 
 ![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix9.png)
+
+3.配置报警动作
 
 ![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix10.png)
 
