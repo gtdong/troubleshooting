@@ -68,6 +68,30 @@ https://www.zabbix.com/documentation/
       
 4.web监控后台添加主机
 
+依次点击 配置 ---> 主机 ---> 创建主机 
+
+![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix6.png)
+
+主机名称必须和配置文件中的Hostname一样，主机群组可以自定义也可以任意选择一个，IP填客户端IP。   
+
+然后配置模版，也就是配置监控项，勾选完点击添加。
+![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix7.png)
+
+## 配置邮件报警
+
+![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix8.png)
+
+![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix9.png)
+
+![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix10.png)
+
+![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix11.png)
+
+![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix12.png)
+
+
+
+
 
      
      
