@@ -5,7 +5,7 @@ https://www.zabbix.com/download
 https://www.zabbix.com/documentation/
 ## configure zabbix
 这里我主要想讲的是zabbix的初始化配置和添加监控主机等基础配置。
-## 1.前端的初始化
+## 前端的初始化
 安装方的给的安装步骤安装完后，我们需要执行`systemctl restart zabbix-server zabbix-agent httpd`这个命令，这时zabbix服务器就起了了，下一步就是初始化
 前端配置：
 
@@ -24,4 +24,11 @@ https://www.zabbix.com/documentation/
 
 安装完成，进行登录。默认用户是Admin，密码是zabbix，当然这些都可以登录后进行修改。
 
-## 2.
+## 语言、乱码、时区问题
+1.语言设置：   
+依次点击Administration ---> Users ---> Admin,然后在language选项选择相应的语言，然后记得Update。刷新后访问配置就会生效。
+
+2.乱码设置：   
+  在使用中文时可能会出现乱码的问题，解决方法是替换字体：
+
+
