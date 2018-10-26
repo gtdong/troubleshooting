@@ -6,5 +6,8 @@ https://www.zabbix.com/documentation/
 ## configure zabbix
 这里我主要想讲的是zabbix的初始化配置和添加监控主机等基础配置。
 ## 1.前端的初始化
-安装方的给的安装步骤安装完后，我们需要执行`systemctl restart zabbix-server zabbix-agent httpd`这个命令，这时zabbix服务器就起了了，下一步就是
+安装方的给的安装步骤安装完后，我们需要执行`systemctl restart zabbix-server zabbix-agent httpd`这个命令，这时zabbix服务器就起了了，下一步就是初始化
+前端配置：
+
+
 
