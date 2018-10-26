@@ -45,6 +45,31 @@ https://www.zabbix.com/documentation/
           php_value date.timezone Asia/Shanghai
      #这里我用的是上海时区
      
+## 添加监控主机
+
+以上我们是对zabbix的server端进行的配置，接下来我们需要配置客户端，也就是被监控端。
+
+1.安装zabbix-agent，负责从被监控端搜集主机信息，这一步在在被监控端安装。
+
+      # rpm -i https://repo.zabbix.com/zabbix/4.0/rhel/7/x86_64/zabbix-release-4.0-1.el7.noarch.rpm
+      
+      # yum -y install zabbix-agent
+      
+2.修改配置文件
+
+      # vim /etc/zabbix/zabbix_agentd.conf
+          Server=server端IP
+          Hostname=front1   #主机名，自定义即可
+          
+          #ServerActive=127.0.0.1   #这一行注释掉
+3.启动zabbix客户端
+      
+      # systemctl start zabbix-agent
+      
+4.web监控后台添加主机
+
+
+     
      
 
 
