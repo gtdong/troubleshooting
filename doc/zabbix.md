@@ -78,7 +78,48 @@ https://www.zabbix.com/documentation/
 ![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix7.png)
 
 ## 配置邮件报警
+1.建立告警脚本
 
+    # cd /usr/lib/zabbix/alertscript
+    # vim sendEmail.py
+      #!/usr/bin/env python
+      #coding:utf-8
+      import time
+      import smtplib
+      import logging
+      from email.mime.text import MIMEText
+      import sys
+      LOG_FILENAME="/var/log/email_python.log"
+      mail_host = 'mstp.163.com'
+      mail_user = 'xxxx@xxxx.com'
+      mail_pass = 'xxxxx'
+      mail_postfix = 'xxxxx'
+      def send_mail(to_list,subject,content,format='html'):
+       try:
+        me=mail_user+"<"+mail_user+"@"+mail_postfix+">"
+        msg=MIMEText(content,format,'utf-8')
+        msg["Accept-Language"]="zh-CN"
+        msg["Accept-Charset"]="ISO-8859-1,utf-8"
+        msg['Subject']=subject
+        msg['From']=me
+        msg['to']=to_list
+        s=smtplib.SMTP()
+        s.connect(mail_host,"25")
+        s.login(mail_user,mail_pass)
+        s.sendmail(me,to_list,msg.as_string())
+        s.close()
+      except Exception,e:
+        logging.basicConfig(filename = LOG_FILENAME, level = logging.DEBUG)
+        logging.error(time.strftime('%Y-%m-%d %H:%I:%M',time.localtime(time.time()))+e)
+      if __name__ == "__main__":
+      send_mail(sys.argv[1],sys.argv[2],sys.argv[3])
+      
+      设置告警脚本的权限
+
+      sudo chmod zabbix:zabbix sendEmail.py
+
+      sudo chown 755 sendEmail.py
+    
 ![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix8.png)
 
 ![image](https://github.com/gtdong/troubleshooting/blob/master/images/zabbix9.png)
