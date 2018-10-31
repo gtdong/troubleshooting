@@ -4,7 +4,7 @@ webnode=(
 192.168.1.223
 192.168.1.224
 )
-webpass="wangyang"
+webpass="password"
 
 #自动回答提示
 for host  in  ${webnode[@]}
