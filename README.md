@@ -17,6 +17,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 * [project](#project)
   * [blockchain](#blockchain)
   * [application](#application)
+* [scripts](#https://github.com/gtdong/troubleshooting/tree/master/doc)
   
 ## programming
 
