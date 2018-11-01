@@ -27,6 +27,7 @@
         
     vim /etc/rsyncd_users.db                     #创建用户密码文件
         upload:password                          #密码（格式必须为：username:password）
+    chmod 600 /etc/rsyncd_users.db               #必须修改权限，否则会报错
         
     service rsyncd restart    #重启服务
     
