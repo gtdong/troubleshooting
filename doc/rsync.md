@@ -36,4 +36,8 @@
     
     vim /etc/profile
       export RSYNC_PASSWORD=password             #声明密码的全局变量（同步时不用输密码，系统会自动去这个环境密码中去找密码）
+      
+### 同步测试
+
+    rsync -avz upload@服务器ip::DATA /client/rsync
     
