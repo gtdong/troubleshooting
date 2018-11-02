@@ -40,5 +40,5 @@
       
 ### 同步测试
 
-    rsync -avz upload@服务器ip::DATA /client/rsync
+    rsync -avzP upload@服务器ip::DATA /client/rsync
     
