@@ -1,59 +1,59 @@
 
 # troubleshooting
-
+[英文版](README_EN.md)
 ## Mission
-My mission is to build a home for those who have trouble in using linux.Here I give some troubleshooting examples when using linux.Welcome to communicate with me!
+在这里我将给出一些我在使用linux时的一些trouleshooting例子，欢迎与我交流。
 
 ## Contents
 
-* [programming](#programming)
+* [编程](#编程)
   * [git](#git)
   * [nodejs](#nodejs)
   * [python](#python)
   
-* [system_service](#system_service)
+* [系统服务](#系统服务)
   * [shell](#shell)
-  * [webservice](#webservice)
+  * [网络服务](#网络服务)
   
-* [project](#project)
+* [项目](#项目)
   * [blockchain](#blockchain)
   * [application](#application)
-* [scripts](https://github.com/gtdong/troubleshooting/tree/master/script)
+* [脚本](https://github.com/gtdong/troubleshooting/tree/master/script)
   
-## programming
+## 编程
 
 ### git
 
-* [The README syntax](doc/github中的README.md语法.md)
-* [git_account](doc/git多账户配置.md)
+* [README语法](doc/github中的README.md语法.md)
+* [git多账户配置](doc/git多账户配置.md)
 
 ### nodejs
-* [node_install](doc/node多版本管理.md)
+* [nodejs多版本管理](doc/node多版本管理.md)
 
 ### python
-* [python_install](doc/python安装.md)
+* [python安装](doc/python安装.md)
 
-## system_service
+## 系统服务
 
 ### shell
 * [Operation and maintenance authority allocation](doc/operation-authority-allocation.md)
-* [script](script/)
-* [Modify the maximum number of files to open](doc/最大文件打开数限制.md)
-* [too much timewait](doc/timewait.md)
+* [脚本](script/)
+* [修改最大文件打开数限制](doc/最大文件打开数限制.md)
+* [太多的timewait](doc/timewait.md)
 * [ansible](doc/ansible.md)
 * [iptables](doc/iptables.md)
-* [Ali cloud SSH login failed](doc/ali-ssh-failed.md)
-* [authorized_keys damaged on aws ec2 instance](doc/aws-authorized_keys.md)
-* [server performance monitoring](doc/server-performance.md)
+* [阿里云登录失败](doc/ali-ssh-failed.md)
+* [aws ec2实例authorized_keys损坏](doc/aws-authorized_keys.md)
+* [服务端操作监控](doc/server-performance.md)
 
-### webservice
+### 网络服务
 * [https](doc/https.md)
 * [postfix](doc/postfix.md)
-* [postfix_ssl](doc/postfix加密.md)
+* [postfix加密](doc/postfix加密.md)
 * [apache&nginx](doc/apache&nginx跳转.md)
-* [Certificate chain is incomplete](doc/证书链不完整.md)
+* [ssl证书链不完整](doc/证书链不完整.md)
 * [postgresql](doc/postgresql.md)
-* [Sql injection](doc/nginx_sql_injection.md)
+* [sql注入](doc/nginx_sql_injection.md)
 * [zabbix](doc/zabbix.md)
 * [rsync](doc/rsync.md)
 
@@ -68,7 +68,7 @@ My mission is to build a home for those who have trouble in using linux.Here I g
 
 ### application
 * [seafile](doc/seafile.md)
-* [ssr](doc/ssr.md)
+* [ssrVPN](doc/ssr.md)
 
 
 
