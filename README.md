@@ -1,6 +1,5 @@
 
 # troubleshooting
-[英文版](README_EN.md)
 ## Mission
 在这里我将给出一些我在使用linux时的一些trouleshooting例子，欢迎与我交流。
 
@@ -32,6 +31,7 @@
 
 ### python
 * [python安装](doc/python安装.md)
+* [我的python之路](https://github.com/michaeldong1024/the-road-of-python)
 
 ## 系统服务
 
