@@ -16,9 +16,9 @@
   * [网络服务](#网络服务)
   
 * [项目](#项目)
-  * [blockchain](#blockchain)
-  * [application](#application)
-* [脚本](https://github.com/gtdong/troubleshooting/tree/master/script)
+  * [区块链](#区块链)
+  * [应用](#应用)
+* [脚本](script)
   
 ## 编程
 
@@ -59,7 +59,7 @@
 
 ## Project
 
-### blockchain
+### 区块链
 
 * [peatio](doc/deploy-production-server-centos-7.4.md)
 * [Byteball](doc/Byteball.md)
