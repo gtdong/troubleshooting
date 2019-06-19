@@ -61,7 +61,6 @@
 
 ### 区块链
 
-* [peatio](doc/deploy-production-server-centos-7.4.md)
 * [Byteball](doc/Byteball.md)
 * [eos](doc/eos.md)
 * [tinychain](doc/tinychain.md)
