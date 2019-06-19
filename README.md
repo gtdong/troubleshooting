@@ -7,7 +7,7 @@
 ## Contents
 
 * [编程](#编程)
-  * [git](#git)
+  * [git版本管理](#git)
   * [nodejs](#nodejs)
   * [python](#python)
   
@@ -36,7 +36,7 @@
 ## 系统服务
 
 ### shell
-* [Operation and maintenance authority allocation](doc/operation-authority-allocation.md)
+* [运维权限分配](doc/operation-authority-allocation.md)
 * [脚本](script/)
 * [修改最大文件打开数限制](doc/最大文件打开数限制.md)
 * [太多的timewait](doc/timewait.md)
