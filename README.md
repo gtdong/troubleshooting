@@ -47,15 +47,15 @@
 * [服务端操作监控](doc/server-performance.md)
 
 ### 网络服务
-* [https](doc/https.md)
-* [postfix](doc/postfix.md)
+* [https证书](doc/https.md)
+* [postfix邮件配置](doc/postfix.md)
 * [postfix加密](doc/postfix加密.md)
 * [apache&nginx](doc/apache&nginx跳转.md)
 * [ssl证书链不完整](doc/证书链不完整.md)
 * [postgresql](doc/postgresql.md)
 * [sql注入](doc/nginx_sql_injection.md)
-* [zabbix](doc/zabbix.md)
-* [rsync](doc/rsync.md)
+* [zabbix监控](doc/zabbix.md)
+* [rsync文件同步](doc/rsync.md)
 
 ## Project
 
