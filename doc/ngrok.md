@@ -16,13 +16,13 @@ $ git clone https://github.com/inconshreveable/ngrok.git
 #### 1.2 生成自签名证书
 ```shell
 # 自建ngrokd服务时我们需要生成自己的证书，并且构建携带该证书的客户端
-# 如果提供服务的地址为：ngrok.eyexpo.com.cn ,那么这里的 NGROK_BASE_DOMAIN 变量就应该是 ngrok.eyexpo.com.cn
+# 如果提供服务的地址为：ngrok.eyexpo.com.cn ,那么这里的 NGROK_BASE_DOMAIN 变量就应该是 ngrok.example.com
 
 $ cd ngrok
 $ openssl genrsa -out rootCA.key 2048
-$ openssl req -x509 -new -nodes -key rootCA.key -subj "/CN=ngrok.eyexpo.com.cn" -days 5000 -out rootCA.pem
+$ openssl req -x509 -new -nodes -key rootCA.key -subj "/CN=ngrok.example.com" -days 5000 -out rootCA.pem
 $ openssl genrsa -out device.key 2048
-$ openssl req -new -key device.key -subj "/CN=ngrok.eyexpo.com.cn" -out device.csr
+$ openssl req -new -key device.key -subj "/CN=ngrok.example.com" -out device.csr
 $ openssl x509 -req -in device.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateserial -out device.crt -days 5000
 
 # ngrok通过bindata将ngrok源码目录下的assets目录（资源文件）打包到可执行文件(ngrokd和ngrok)中 去，assets/client/tls和assets/server/tls下分别存放着用于
@@ -48,7 +48,7 @@ $ GOOS=windows make release-client    #windows平台客户端
 ### 2 服务端启动
 #### 2.1 启动ngrokd
 ```shell
-$ nohup ngrokd  -tlsKey=assets/server/tls/snakeoil.key -tlsCrt=assets/server/tls/snakeoil.crt -domain="ngrok.eyexpo.com.cn" -httpAddr=":8080"
+$ nohup ngrokd  -tlsKey=assets/server/tls/snakeoil.key -tlsCrt=assets/server/tls/snakeoil.crt -domain="ngrok.example.com" -httpAddr=":8080"
  -httpsAddr=":8081" -tunnelAddr=":4443" &
  # -tlsKey : ssl证书的key
  # -tlsCrt : crt证书
@@ -61,7 +61,7 @@ $ nohup ngrokd  -tlsKey=assets/server/tls/snakeoil.key -tlsCrt=assets/server/tls
 #### 3.2 创建配置文件
 ```shell
 $ vim ngrok.cfg
-server_addr: "ngrok.eyexpo.com.cn:4443"
+server_addr: "ngrok.example.com:4443"
 trust_host_root_certs: false
 tunnels:
   ssh:                    #通道名
@@ -84,7 +84,7 @@ $ setsid ./ngrok -subdomain=local -config=ngrok.cfg -proto=http 80
 ```
 #### 3.4 访问测试
 ```shell
-$ ssh -p 35714 dev@local.ngrok.eyexpo.com.cn
+$ ssh -p 35714 dev@local.ngrok.example.com
 Last login: Thu Jul 18 11:24:31 2019 from localhost
 $
 
