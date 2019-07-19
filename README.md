@@ -56,7 +56,7 @@
 * [sql注入](doc/nginx_sql_injection.md)
 * [zabbix监控](doc/zabbix.md)
 * [rsync文件同步](doc/rsync.md)
-* [ngrokd内网穿透](doc/ngrokd.md)
+* [ngrokd内网穿透](doc/ngrok.md)
 
 ## Project
 
