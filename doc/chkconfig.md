@@ -17,13 +17,20 @@
 * **扩展**
 我们来看看官方对chkconfig自启动配置脚本的说明:
 ```
-Each  service  which should be manageable by chkconfig needs two or more commented lines added to its init.d script. The first line tells chkconfig what runlevels the service should be started in by default, as well as the start and stop priority levels.  If  the service  should  not,  by default, be started in any runlevels, a - should be used in place of the runlevels list.  The second line contains a description for the service, and may be extended across multiple lines with backslash continuation.
+Each  service  which should be manageable by chkconfig needs two or more commented lines added to its
+init.d script. The first line tells chkconfig what runlevels the service should be started in by 
+default, as well as the start and stop priority levels.  If  the service  should  not,  by default, 
+be started in any runlevels, a - should be used in place of the runlevels list.  The second line 
+contains a description for the service, and may be extended across multiple lines with backslash 
+continuation.
 
 For example, random.init has these three lines:
 # chkconfig: 2345 20 80
 # description: Saves and restores system entropy pool for \
 #              higher quality random number generation.
-This says that the random script should be started in levels 2, 3, 4, and 5, that its start priority should be  20,  and  that  its stop  priority  should  be  80.  You should be able to figure out what the description says; the \ causes the line to be continued.The extra space in front of the line is ignored.
+This says that the random script should be started in levels 2, 3, 4, and 5, that its start priority 
+should be  20,  and  that  its stop  priority  should  be  80.  You should be able to figure out 
+what the description says; the \ causes the line to be continued.The extra space in front of the line is ignored.
 ```
 这里的234其实就是linux的系统启动级别：
 ```
