@@ -15,7 +15,7 @@
 #注意： 第二行和第三行必写，负责会出现如“服务 autostart.sh 不支持 chkconfig”这样的错误。
 ```
 **扩展**
->>我们来看看官方对chkconfig自启动配置脚本的说明:
+&emsp;我们来看看官方对chkconfig自启动配置脚本的说明:
 ```
 Each  service  which should be manageable by chkconfig needs two or more commented lines added to its
 init.d script. The first line tells chkconfig what runlevels the service should be started in by 
@@ -32,7 +32,7 @@ This says that the random script should be started in levels 2, 3, 4, and 5, tha
 should be  20,  and  that  its stop  priority  should  be  80.  You should be able to figure out 
 what the description says; the \ causes the line to be continued.The extra space in front of the line is ignored.
 ```
->>这里的2345其实就是linux的系统启动级别：
+&emsp;这里的2345其实就是linux的系统启动级别：
 ```
 0: 停机
 1：单用户形式，只root进行维护
