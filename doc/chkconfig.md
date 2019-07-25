@@ -1,6 +1,6 @@
 # 用chkconfig配置开机启动脚本
 ## 步骤
-* **1.编写脚本autostart.sh**（这里以开机启动redis服务为例），脚本内容如下：
+**1.编写脚本autostart.sh**（这里以开机启动redis服务为例），脚本内容如下：
 ```shell
 #!/bin/sh
 #chkconfig: 2345 80 90
@@ -14,7 +14,7 @@
 #脚本第三行 表示的是服务的描述信息  
 #注意： 第二行和第三行必写，负责会出现如“服务 autostart.sh 不支持 chkconfig”这样的错误。
 ```
-* **扩展**
+**扩展**
 >>我们来看看官方对chkconfig自启动配置脚本的说明:
 ```
 Each  service  which should be manageable by chkconfig needs two or more commented lines added to its
@@ -43,13 +43,13 @@ what the description says; the \ causes the line to be continued.The extra space
 6：重启
 ```
 &emsp;通过编辑 /etc/inittab 文件，可以修改系统默认启动级别
-* **2.将写好的autostart.sh脚本移动到/etc/rc.d/init.d/目录下**  
-* **3.给脚本赋可执行权限**
+**2.将写好的autostart.sh脚本移动到/etc/rc.d/init.d/目录下**  
+**3.给脚本赋可执行权限**
  ```shell
 cd /etc/rc.d/init.d/
 chmod +x autostart.sh
 ```
-* **4.添加脚本到开机自动启动项目中**
+**4.添加脚本到开机自动启动项目中**
  ```shell
 chkconfig --add autostart.sh
 chkconfig autostart.sh on
