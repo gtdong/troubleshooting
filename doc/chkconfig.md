@@ -32,7 +32,7 @@ This says that the random script should be started in levels 2, 3, 4, and 5, tha
 should be  20,  and  that  its stop  priority  should  be  80.  You should be able to figure out 
 what the description says; the \ causes the line to be continued.The extra space in front of the line is ignored.
 ```
-这里的234其实就是linux的系统启动级别：
+这里的2345其实就是linux的系统启动级别：
 ```
 0: 停机
 1：单用户形式，只root进行维护
