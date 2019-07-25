@@ -42,7 +42,7 @@ what the description says; the \ causes the line to be continued.The extra space
 5：图形化
 6：重启
 ```
->通过编辑 /etc/inittab 文件，可以修改系统默认启动级别
+>>通过编辑 /etc/inittab 文件，可以修改系统默认启动级别
 * **2.将写好的autostart.sh脚本移动到/etc/rc.d/init.d/目录下**  
 * **3.给脚本赋可执行权限**
  ```shell
