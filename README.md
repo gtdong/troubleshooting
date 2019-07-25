@@ -45,6 +45,7 @@
 * [阿里云登录失败](doc/ali-ssh-failed.md)
 * [aws ec2实例authorized_keys损坏](doc/aws-authorized_keys.md)
 * [服务端操作监控](doc/server-performance.md)
+* [用chkconfig配置开机启动脚本](doc/chkconfig.md)
 
 ### 网络服务
 * [https证书](doc/https.md)
