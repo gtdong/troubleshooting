@@ -1,5 +1,6 @@
 # 用chkconfig配置开机启动脚本
-* 1.编写脚本autostart.sh（这里以开机启动redis服务为例），脚本内容如下：
+## 步骤
+* **1.编写脚本autostart.sh**（这里以开机启动redis服务为例），脚本内容如下：
 ```shell
 #!/bin/sh
 #chkconfig: 2345 80 90
@@ -12,15 +13,14 @@
 脚本第二行 “#chkconfig: 2345 80 90” 表示在2/3/4/5运行级别启动，启动序号(S80)，关闭序号(K90)； 
 脚本第三行 表示的是服务的描述信息  
 注意： 第二行和第三行必写，负责会出现如“服务 autostart.sh 不支持 chkconfig”这样的错误。
-* 2.将写好的autostart.sh脚本移动到/etc/rc.d/init.d/目录下  
-* 3.给脚本赋可执行权限
+* **2.将写好的autostart.sh脚本移动到/etc/rc.d/init.d/目录下**  
+* **3.给脚本赋可执行权限**
  ```shell
 cd /etc/rc.d/init.d/
 chmod +x autostart.sh
 ```
-* 4.添加脚本到开机自动启动项目中
+* **4.添加脚本到开机自动启动项目中**
  ```shell
 chkconfig --add autostart.sh
 chkconfig autostart.sh on
 ```
-到这里就设置完成了，我们只需要重启一下我们的服务器，就能看到我们配置的redis服务已经可以开机自动启动了。
