@@ -1,4 +1,4 @@
-# Linux设置服务开机自动启动的方式有好多种，这里介绍一下通过chkconfig命令添加脚本为开机自动启动的方法。
+# 用chkconfig配置开机启动脚本
  
 1. 编写脚本autostart.sh（这里以开机启动redis服务为例），脚本内容如下：
 ```shell
