@@ -1,0 +1,19 @@
+#!/bin/bash
+
+lastb > a.txt
+
+lastb | awk '$2~/ssh:notty/{print $3}' > b.txt
+
+sort -u b.txt > c.txt
+
+        for i in $(cat c.txt)
+
+        do
+
+        x=$(grep $i a.txt | wc -l)
+
+        if [ $x -ge 5 ]
+        then
+                iptables -A INPUT -s $i -p tcp --dport 22 -j DROP
+        fi
+		done
