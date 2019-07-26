@@ -10,8 +10,8 @@
   * [nodejs](#nodejs)
   * [python](#python)
   
-* [系统服务](#系统服务)
-  * [shell](#shell)
+* [Linux](#linux)
+  * [系统相关](#系统相关)
   * [网络服务](#网络服务)
   
 * [项目](#项目)
@@ -37,7 +37,7 @@
 
 ## 系统服务
 
-### shell
+### 系统相关
 * [运维权限分配](doc/operation-authority-allocation.md)
 * [脚本](script/)
 * [修改最大文件打开数限制](doc/最大文件打开数限制.md)
