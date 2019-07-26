@@ -1,5 +1,5 @@
 
-![](https://img.shields.io/badge/language-python-green.svg)
+![](https://img.shields.io/badge/language-python-linux-green.svg)
 ![](https://img.shields.io/badge/language-linux-orange.svg)
 # troubleshooting
 ## Mission
