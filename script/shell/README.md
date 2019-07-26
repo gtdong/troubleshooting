@@ -1,1 +1,1 @@
-# python常用脚本
+# shell常用脚本
