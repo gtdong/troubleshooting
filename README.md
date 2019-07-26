@@ -1,6 +1,6 @@
 # troubleshooting
 ![](https://img.shields.io/badge/language-shell-orange.svg)
-![Python version](https://img.shields.io/badge/python-3.x-blue.svg)
+![](https://img.shields.io/badge/language-python3.x-green.svg)
 ![](https://img.shields.io/github/languages/top/michaeldong1024/troubleshooting)
 ![](https://img.shields.io/github/languages/code-size/michaeldong1024/troubleshooting?color=brightgreen)
 ![](https://img.shields.io/github/repo-size/michaeldong1024/troubleshooting)
