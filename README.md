@@ -1,7 +1,7 @@
 
 # troubleshooting
 ## Mission
-在这里我将给出一些我在使用linux时的一些trouleshooting例子，欢迎与我交流。
+在这里我将给出一些我在工作时的一些trouleshooting例子，欢迎与我交流。
 
 ## Contents
 
