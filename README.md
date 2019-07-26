@@ -1,7 +1,6 @@
 
 ![](https://img.shields.io/badge/language-python-green.svg)
 ![](https://img.shields.io/badge/language-linux-orange.svg)
-![GitHub All Releases](https://img.shields.io/github/downloads/michaeldong1024/troubleshooting/total)
 # troubleshooting
 ## Mission
 在这里我将给出一些我在工作时的一些trouleshooting例子，欢迎与我交流。
