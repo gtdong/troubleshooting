@@ -18,6 +18,8 @@
   * [区块链](#区块链)
   * [应用](#应用)
 * [常用脚本](script)
+  * [shell](script/shell)
+  * [python](script/python)
   
 ## 编程
 
