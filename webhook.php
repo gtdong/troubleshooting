@@ -28,8 +28,8 @@
     // 判断签名是否匹配  
     if ($hash === $payloadHash) {
         
-        $cmd1 = "git pull";
-        system($cmd1);
+        $cmd1 = "sudo git pull origin master";
+        shell_exec($cmd1);
 
         $res_log .= 'Success:'.PHP_EOL;
         $res_log .= $content['head_commit']['author']['name'] . ' 在' . date('Y-m-d H:i:s') . '向' . $content['repository']['name'] . '项目的' . $content['ref'] . '分支push了' . count($content['commits']) . '个commit：' . PHP_EOL;
