@@ -28,7 +28,7 @@
     // 判断签名是否匹配  
     if ($hash === $payloadHash) {
         
-        $cmd1 = "sudo git pull origin master";
+        $cmd1 = "/usr/local/git/bin/git pull";
         shell_exec($cmd1);
 
         $res_log .= 'Success:'.PHP_EOL;
