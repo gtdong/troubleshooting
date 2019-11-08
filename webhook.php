@@ -28,7 +28,7 @@
     // 判断签名是否匹配  
     if ($hash === $payloadHash) {
         
-        $cmd1 = "sh update.sh";
+        $cmd1 = "git pull";
         system($cmd1);
 
         $res_log .= 'Success:'.PHP_EOL;
