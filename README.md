@@ -19,10 +19,10 @@
   * [网络服务](#网络服务)
   * [docker](#docker)
   
-* [For fun](#For fun)
+* [Other](#Other)
   * [区块链](#区块链)
   * [应用](#应用)
-* [常用脚本](script)
+  * [常用脚本](script)
   * [shell](script/shell)
   * [python](script/python)
   
@@ -74,7 +74,7 @@
 * [docker k8s](doc/docker_k8s.md)
 * [docker常见问题解决](doc/docker_troubleshooting.md)
 
-## For fun
+## Other
 * [Byteball](doc/Byteball.md)
 * [eos](doc/eos.md)
 * [tinychain](doc/tinychain.md)
