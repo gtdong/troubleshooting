@@ -21,7 +21,7 @@
   * [常用脚本](script)
   
 * [Other](#Other)
-* [Contact me](#Contact me)
+* [Contact me](#Contact)
  
 ## 编程
 
@@ -80,5 +80,5 @@
 
 
 
-## Contact me
+## Contact
 michaeldong@126.com
