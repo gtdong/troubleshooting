@@ -72,6 +72,7 @@
 * [docker镜像构建](doc/docker_image.md)
 * [docker swarm集群](doc/docker_swarm.md)
 * [docker k8s](doc/docker_k8s.md)
+* [docker常见问题解决](doc/docker_troubleshooting.md)
 
 ## Project
 
