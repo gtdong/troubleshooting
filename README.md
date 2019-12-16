@@ -18,12 +18,10 @@
   * [系统相关](#系统相关)
   * [网络服务](#网络服务)
   * [docker](#docker)
+  * [常用脚本](script)
   
 * [Other](#Other)
-  * [常用脚本](script)
-  * [shell](script/shell)
-  * [python](script/python)
-  
+ 
 ## 编程
 
 ### git
