@@ -21,7 +21,7 @@
   * [常用脚本](script)
   
 * [Other](#Other)
-* [Contact me](#Contact)
+* [Contact](#Contact)
  
 ## 编程
 
