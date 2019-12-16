@@ -10,7 +10,7 @@
 ## Contents
 
 * [编程](#编程)
-  * [git版本管理](#git)
+  * [git](#git)
   * [nodejs](#nodejs)
   * [python](#python)
   
