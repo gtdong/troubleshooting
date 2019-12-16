@@ -19,7 +19,7 @@
   * [网络服务](#网络服务)
   * [docker](#docker)
   
-* [项目](#项目)
+* [For fun](#For fun)
   * [区块链](#区块链)
   * [应用](#应用)
 * [常用脚本](script)
@@ -74,15 +74,10 @@
 * [docker k8s](doc/docker_k8s.md)
 * [docker常见问题解决](doc/docker_troubleshooting.md)
 
-## Project
-
-### 区块链
-
+## For fun
 * [Byteball](doc/Byteball.md)
 * [eos](doc/eos.md)
 * [tinychain](doc/tinychain.md)
-
-### application
 * [seafile](doc/seafile.md)
 * [ssrVPN](doc/ssr.md)
 
