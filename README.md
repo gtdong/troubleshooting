@@ -70,8 +70,8 @@
 * [docker与docker安装](doc/docker_install.md)
 * [docker常用命令](doc/docker_cmd.md)
 * [docker镜像构建](doc/docker_image.md)
-* [docker_swarm集群](doc/docker_swarm.md)
-* [docker_k8s](doc/docker_k8s.md)
+* [docker swarm集群](doc/docker_swarm.md)
+* [docker k8s](doc/docker_k8s.md)
 
 ## Project
 
