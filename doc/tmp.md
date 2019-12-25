@@ -101,3 +101,270 @@ chkconfig --add autostart.sh
 chkconfig autostart.sh on
 到这里就设置完成了，我们只需要重启一下我们的服务器，就能看到我们配置的redis服务已经可以开机自动启动了。
 ```
+
+webhook代码自动更新
+  ```
+  1.     服务器上生成公钥
+
+ssh-keygen  
+
+2.  将公钥上传到github上，实现免密码push和pull
+
+登录github >> settings >> SSH and GPG keys >> New SSH key >>
+
+将上一步生成的.pub公钥内容复制粘贴到过来
+
+3.  在服务器上开启API:当代码发生merge操作时会自动调用这个API,API调用写好的脚本实现更新代码及其他相关操作。
+
+ 
+
+(1)写api
+
+vim webhook.php
+
+ 
+
+<?php
+
+ 
+
+ 
+
+    //密钥
+
+    $secret = "******";
+
+    $wwwUser = 'dev';  #程序执行用户（最好和apache用户，服务器用户一致，否则会出现权限问题，这里我使用的是dev用户在服务器上操作，相应的apache的用户和用户组我也设置为dev）
+
+    $wwwGroup = 'dev';  #程序执行用户组
+
+ 
+
+    //日志文件地址
+
+    $fs = fopen('gitHubAuto_hook.log', 'a');
+
+ 
+
+    //获取GitHub发送的内容
+
+    $json = file_get_contents('php://input');
+
+    $content = json_decode($json, true);
+
+    //github发送过来的签名
+
+    $signature = $_SERVER['HTTP_X_HUB_SIGNATURE'];
+
+ 
+
+    if (!$signature) {
+
+       fclose($fs);
+
+       return http_response_code(404);
+
+     }
+
+ 
+
+    list($algo, $hash) = explode('=', $signature, 2);
+
+    //计算签名
+
+    $payloadHash = hash_hmac($algo, $json, $secret);
+
+ 
+
+    // 判断签名是否匹配
+
+    if ($hash === $payloadHash) {
+
+ 
+
+        $cmd1 = "/usr/bin/sh update.sh";
+
+        shell_e x e c($cmd1);
+
+ 
+
+        $res_log .= 'Success:'.PHP_EOL;
+
+        $res_log .= $content['head_commit']['author']['name'] . ' 在' . date('Y-m-d H:i:s') . '向' . $content['repository']['name'] . '项目的' . $content['ref'] . '分支push了' . count($content['commits']) . '个commit：' . PHP_EOL;
+
+        $res_log .= $res.PHP_EOL;
+
+        $res_log .= '======================================================================='.PHP_EOL;
+
+ 
+
+        fwrite($fs, $res_log);
+
+        $fs and fclose($fs);
+
+ 
+
+ 
+
+      } else {
+
+            $res_log  = 'Error:'.PHP_EOL;
+
+            $res_log .= $content['head_commit']['author']['name'] . ' 在' . date('Y-m-d H:i:s') . '向' . $content['repository']['name'] . '项目的' . $content['ref'] . '分支push了' . count($content['commits']) . '>个commit：' . PHP_EOL;
+
+            $res_log .= '密钥不正确不能pull'.PHP_EOL;
+
+            $res_log .= '======================================================================='.PHP_EOL;
+
+           fwrite($fs, $res_log);
+
+           $fs and fclose($fs);
+
+      }
+
+ 
+
+（2）配置apache实现可外网访问
+
+ 
+
+        Vim httpd-vhosts.conf添加如下内容
+
+ 
+
+listen 81
+
+<VirtualHost *:81>
+
+ServerAdmin localhost
+
+ErrorLog "/var/www/github_web/error_log"
+
+CustomLog "/var/www//github_web/access_log" combined
+
+DocumentRoot "/var/www/github_web"
+
+<Directory "/var/www/github_web">
+
+AllowOverride None
+
+Order allow,deny
+
+Allow from all
+
+</Directory>
+
+</VirtualHost>
+
+ 
+
+   重启apache
+
+   service httpd restart
+
+ 
+
+4.     github配置webhook接口
+
+ 
+
+登录github >> 选择要配置自动更新的repository >> Settings
+
+>> 点击左边栏 Webhooks >> Add webhook
+
+ 
+
+（1）  在Payload URL 填写上一步配置的API
+
+http://服务器ip:81/webhook.ip
+
+   (2) Content type一栏选择 application/json
+
+ 
+
+   (3) Secret 填写第3步定义的secret
+
+ 
+
+   (4) Which events触法条件配置，也就是在什么情况下会调用这个api,
+
+   这里我们配置的是：在对PR进行merge的时候触发api.
+
+ 
+
+      在Let me select individuals events中选择Pull requests
+
+ 
+
+5.  自动更新代码的脚本配置
+
+ 
+
+vim update.sh
+
+cd 项目路径 && /usr/local/git/bin/git pull origin master && /usr/bin/python3 mail.py
+
+ 
+
+注意：shell命令要用绝对路径，否则有可能会出问题
+
+ 
+
+6.  邮件通知脚本配置
+
+ 
+
+vim mail.py
+
+ 
+
+#!/usr/bin/env python3
+
+import smtplib
+
+from email.mime.text import MIMEText
+
+from email.header import Header
+
+ 
+
+sender = 'admin@example.com'
+
+pwd = 'admin'
+
+receivers = ['user@exmaple.com']# 接收邮件，可设置为你的QQ邮箱或者其他邮箱
+
+# 三个参数：第一个为文本内容，第二个 plain 设置文本格式，第三个 utf-8 设置编码
+
+message = MIMEText('项目已经更新', 'plain', 'utf-8')
+
+message['From'] = Header("github", 'utf-8')
+
+#message['To'] =  Header("admin", 'utf-8')
+
+ 
+
+subject = '项目更新'
+
+message['Subject'] = Header(subject, 'utf-8')
+
+ 
+
+ 
+
+try:
+
+    smtpObj = smtplib.SMTP_SSL('smtp.mxhichina.com',465)
+
+    smtpObj.login(sender,pwd)
+
+    smtpObj.sendmail(sender, receivers, message.as_string())
+
+    print ("邮件发送成功")
+
+except smtplib.SMTPException:
+
+    print ("Error: 无法发送邮件")
+
+
+  ```
