@@ -29,7 +29,7 @@ docker images
 docker rmi <image id>
 
 9.想要删除untagged images，也就是那些id为<None>的image的话可以用  
-docker rmi $(docker images | grep "^<none>" | awk "{print $3}"`)
+docker rmi $(docker images | grep "^<none>" | awk "{print $3}")
   
 10.要删除全部image的话  
 docker rmi $(docker images -q)
