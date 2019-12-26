@@ -2,14 +2,17 @@
 
 ## 查看
 ```shell
-1.查看正在运行中的container  
+1.查看docker版本
+docker version
+
+2.查看正在运行中的container  
 docker ps
 docker ps -a 查看所有（包括已经停止的容器）
 
-2.查看当前有些什么images  
+3.查看当前有些什么images  
 docker images
 
-3.查看容器的CPU，内存，IO 等使用信息
+4.查看容器的CPU，内存，IO 等使用信息
 docker stats
 
 ```
