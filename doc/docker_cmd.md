@@ -33,4 +33,7 @@ docker rmi $(docker images | grep "^<none>" | awk "{print $3}"`)
   
 10.要删除全部image的话  
 docker rmi $(docker images -q)
+
+11.查看容器的CPU，内存，IO 等使用信息
+docker stats
 ```
